@@ -10,9 +10,24 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 
 const metadata = {
-  title: 'Namur — Free template for creating websites with Astro + Tailwind CSS',
-  ignoreTitleTemplate: true,
+  title: 'Namur — Soluciones Agropecuarias',
+  description: 'Descubre Namur, tu socio ideal para soluciones agropecuarias. Ofrecemos productos agrícolas, asesoría técnica para maximizar la productividad y eficiencia.',
+  keywords: 'Namur, soluciones agropecuarias, productos agrícolas, plantillas web, Astro, Tailwind CSS, asesoría técnica, eficiencia agrícola',
+  author: 'Namur',
+  og: {
+    title: 'Namur — Soluciones Agropecuarias',
+    description: 'Descubre Namur, tu socio ideal para soluciones agropecuarias. Ofrecemos productos agrícolas, asesoría técnica para maximizar la productividad y eficiencia.',
+    image: 'https://namur.vercel.app/og.png',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Namur — Soluciones Agropecuarias',
+    description: 'Optimiza tu campo y tu presencia online con Namur. Ofrecemos productos agrícolas para tu éxito.',
+    image: 'https://namur.vercel.app/og.png',
+  },
+  robots: 'index, follow',
 };
+
 ---
 
 <Layout metadata={metadata}>
