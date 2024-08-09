@@ -1,0 +1,25 @@
+---
+export interface Props {
+  label?: string;
+  class?: string;
+  iconClass?: string;
+  iconName?: string;
+}
+
+const {
+  label = 'Toggle between ES and EN Languages',
+  class:
+    className = 'text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center',
+} = Astro.props;
+---
+
+<button id="lang" type="button" class={className} aria-label={label} data-aw-toggle-color-scheme> ES </button>
+
+<script>
+  const button = document.getElementById('lang');
+
+  button!.addEventListener('click', () => {
+    if (button!.textContent === 'ES') button!.textContent = 'EN';
+    else button!.textContent = 'ES';
+  });
+</script>
