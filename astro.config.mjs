@@ -10,7 +10,7 @@ import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
 import compress from 'astro-compress';
 
-import astrowind from './vendor/integration';
+import namur from './vendor/integration';
 
 import {
   readingTimeRemarkPlugin,
@@ -69,7 +69,7 @@ export default defineConfig({
       Logger: 1,
     }),
 
-    astrowind({
+    namur({
       config: './src/config.yaml',
     }),
   ],

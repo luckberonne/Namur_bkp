@@ -1,8 +1,9 @@
 ---
-import { UI } from 'astrowind:config';
+import { UI } from 'namur:config';
 ---
 
-<script is:inline define:vars={{ defaultTheme: UI.theme }}>
+<script is:inline define:vars={{ defaultTheme: UI.theme }}>  
+  localStorage.theme = 'light';
   if (window.basic_script) {
     return;
   }

@@ -7,7 +7,7 @@ import loadConfig from './utils/loadConfig';
 export default ({ config: _themeConfig = 'src/config.yaml' } = {}) => {
   let cfg;
   return {
-    name: 'astrowind-integration',
+    name: 'namur-integration',
 
     hooks: {
       'astro:config:setup': async ({
@@ -19,9 +19,9 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}) => {
         updateConfig,
         addWatchFile,
       }) => {
-        const buildLogger = logger.fork('astrowind');
+        const buildLogger = logger.fork('namur');
 
-        const virtualModuleId = 'astrowind:config';
+        const virtualModuleId = 'namur:config';
         const resolvedVirtualModuleId = '\0' + virtualModuleId;
 
         const rawJsonConfig = await loadConfig(_themeConfig);
@@ -36,7 +36,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}) => {
           vite: {
             plugins: [
               {
-                name: 'vite-plugin-astrowind-config',
+                name: 'vite-plugin-namur-config',
                 resolveId(id) {
                   if (id === virtualModuleId) {
                     return resolvedVirtualModuleId;
@@ -72,7 +72,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}) => {
       },
 
       'astro:build:done': async ({ logger }) => {
-        const buildLogger = logger.fork('astrowind');
+        const buildLogger = logger.fork('namur');
         buildLogger.info('Updating `robots.txt` with `sitemap-index.xml` ...');
 
         try {
