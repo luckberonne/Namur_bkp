@@ -26,10 +26,6 @@ export const headerData = {
           text: 'Agroquimicos',
           href: getPermalink('/services'),
         },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
       ],
     },
     {
@@ -88,18 +84,6 @@ export const footerData = {
       links: [
         { text: 'Quiero Información', href: '#' },
         { text: 'RRHH', href: '#' }
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
       ],
     },
   ],

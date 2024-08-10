@@ -12,68 +12,68 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Contacto" title="¡Conéctate con nosotros!" />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="¡Envíanos un mensaje hoy mismo!"
+    subtitle="Para respuestas más rápidas, explora nuestra sección de Preguntas Frecuentes. ¡Podrías encontrar la solución que buscas allí mismo! Si no, nuestro equipo de soporte estará encantado de ayudarte."
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: 'Nombre',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: 'Correo Electrónico',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Mensaje',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'Al enviar este formulario de contacto, reconoces y aceptas la recopilación de tu información personal.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="Nuestro equipo de soporte generalmente responde dentro de las 24 horas hábiles."
   />
-
+  
   <!-- Features2 Widget ************** -->
-
+  
   <Features2
-    title="We are here to help!"
+    title="¡Estamos aquí para ayudarte!"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: 'Soporte General',
+        description: `Habla con nosotros para consultas relacionadas con la gestión de cuentas, navegación del sitio web, problemas de pago, acceso a productos adquiridos o preguntas generales sobre la funcionalidad del sitio.`,
       },
       {
-        title: 'Contact sales',
+        title: 'Contacto con Ventas',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+          'Habla con nosotros para preguntas sobre compras, opciones de personalización, licencias para uso comercial, consultas sobre productos específicos, etc.',
       },
       {
-        title: 'Technical support',
+        title: 'Soporte Técnico',
         description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+          'Habla con nosotros si enfrentas problemas técnicos como instalación de productos, dificultades de edición, problemas de compatibilidad con software o errores de descarga, u otros desafíos técnicos relacionados con el uso de los productos.',
       },
       {
-        title: 'Phone',
+        title: 'Teléfono',
         description: '+1 (234) 567-890',
         icon: 'tabler:headset',
       },
       {
-        title: 'Email',
-        description: 'contact@support.com',
+        title: 'Correo Electrónico',
+        description: 'contacto@namur.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: 'Ubicación',
+        description: '1234 Calle Lorem Ipsum, 12345, Ciudad Agropecuaria, País',
         icon: 'tabler:map-pin',
       },
     ]}
   />
-</Layout>
+  
