@@ -3,28 +3,19 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Inicio',
-      links: [
-        {
-          text: 'Sobre Nosotros',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Nuestros Valores',
-          href: getPermalink('/terms'),
-        },
-      ],
+      text: 'About us',
+      href: getPermalink('/about'),
     },
     {
       text: 'Productos',
       links: [
         {
           text: 'Alimenticios',
-          href: getPermalink('/services'),
+          href: getPermalink('/productosAlimenticios'),
         },
         {
           text: 'Agroquimicos',
-          href: getPermalink('/services'),
+          href: getPermalink('/productosAgroquimicos'),
         },
       ],
     },
@@ -33,15 +24,15 @@ export const headerData = {
       links: [
         {
           text: 'Consultoría en aspectos regulatorios',
-          href: getPermalink('/pricing'),
+          href: getPermalink('/servicioConsultoria'),
         },
         {
           text: 'Registro de agroquímicos',
-          href: getPermalink('/pricing'),
+          href: getPermalink('/servicioRegistro'),
         },
         {
           text: 'Representación legal y comercial',
-          href: getPermalink('/pricing'),
+          href: getPermalink('/servicioRepresentacion'),
         },
       ],
     },
