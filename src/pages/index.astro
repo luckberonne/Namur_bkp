@@ -3,7 +3,6 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -16,6 +15,8 @@ const metadata = {
 };
 
 ---
+
+<!-- LINEA 6 - import Features from '~/components/widgets/Features.astro'; -->
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
@@ -52,7 +53,7 @@ const metadata = {
   <Note />
 
   <!-- Features Widget *************** -->
-
+  <!--
   <Features
     id="features"
     tagline="Características"
@@ -97,7 +98,7 @@ const metadata = {
       },
     ]}
   />
-
+  -->
   <!-- Content Widget **************** -->
 
   <Content
