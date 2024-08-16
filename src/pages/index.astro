@@ -2,7 +2,6 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -21,18 +20,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Productos',
-        href: 'https://github.com/onwidget/namur',
-        target: '_blank',
-        icon: 'tabler:click',
-      },
-      { text: 'Contactenos', href: '#features' },
-    ]}
-  >
+  <Hero>
     <Fragment slot="title">
       Venta y asesoria <span class="hidden xl:inline">de productos agricolas</span>
       <span class="text-accent dark:text-white highlight"> Namur</span>
@@ -50,7 +38,7 @@ const metadata = {
 
   <!-- Note Widget ******************* -->
 
-  <Note />
+
 
   <!-- Features Widget *************** -->
   <!--
