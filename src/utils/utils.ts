@@ -1,13 +1,21 @@
-import { I18N } from 'namur:config';
+import { I18N } from '~/utils/config';
 
-export const formatter: Intl.DateTimeFormat = new Intl.DateTimeFormat(I18N?.language, {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric',
-  timeZone: 'UTC',
-});
+const formatter =
+  I18N?.dateFormatter ||
+  new Intl.DateTimeFormat('en', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    timeZone: 'UTC',
+  });
 
-export const getFormattedDate = (date: Date): string => (date ? formatter.format(date) : '');
+/* eslint-disable no-mixed-spaces-and-tabs */
+export const getFormattedDate = (date: Date) =>
+  date
+    ? // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      /* @ts-ignore */
+      formatter.format(date)
+    : '';
 
 export const trim = (str = '', ch?: string) => {
   let start = 0,
@@ -21,7 +29,7 @@ export const trim = (str = '', ch?: string) => {
 export const toUiAmount = (amount: number) => {
   if (!amount) return 0;
 
-  let value: string;
+  let value;
 
   if (amount >= 1000000000) {
     const formattedNumber = (amount / 1000000000).toFixed(1);

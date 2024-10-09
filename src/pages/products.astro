@@ -2,6 +2,9 @@
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
+
+const { t } = useTranslations(getLocaleFromUrl(Astro.url));
 
 const metadata = {
   title: 'Services',
@@ -73,9 +76,6 @@ const metadata = {
     }
   ]}
 />
-
-
-  <!-- Content Widget **************** -->
 
   
 </Layout>

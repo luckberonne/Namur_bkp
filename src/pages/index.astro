@@ -6,88 +6,32 @@ import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
+
+const { t } = useTranslations(getLocaleFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Namur — Soluciones Agropecuarias',
-  description: 'Descubre Namur, tu socio ideal para soluciones agropecuarias. Ofrecemos productos agrícolas, asesoría técnica para maximizar la productividad y eficiencia.',
-  keywords: 'Namur, soluciones agropecuarias, productos agrícolas, plantillas web, Astro, Tailwind CSS, asesoría técnica, eficiencia agrícola',
+  title: t('index.metadata.title'),
+  ignoreTitleTemplate: true,
 };
-
 ---
-
-<!-- LINEA 6 - import Features from '~/components/widgets/Features.astro'; -->
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero>
+  <Hero
+  >
     <Fragment slot="title">
-      Venta y asesoria <span class="hidden xl:inline">de productos agricolas</span>
+      {t('index.hero.title.part1')} <span class="hidden xl:inline">{t('index.hero.title.part2')}</span>
       <span class="text-accent dark:text-white highlight"> Namur</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Namur</span> es una empresa dedicada a la venta de productos agrícolas, tanto alimenticios
-        como bioquímicos. Ofrece semillas, fertilizantes, pesticidas y soluciones de manejo de cultivos, enfocándose en la
-        productividad y la sostenibilidad. Además, brinda asesoría técnica para optimizar los resultados de sus clientes
-        en el campo.</span
+        <span class="font-semibold">Namur </span>{t('index.hero.subtitle')}</span
       >
     </Fragment>
   </Hero>
-
-  <!-- Note Widget ******************* -->
-
-
-
-  <!-- Features Widget *************** -->
-  <!--
-  <Features
-    id="features"
-    tagline="Características"
-    title="Lo que obtienes con Namur"
-    subtitle="Una de las soluciones agrícolas más profesionales y completas del mercado. Reconocida por su enfoque en calidad y sostenibilidad en 2022."
-    items={[
-      {
-        title: 'Integración Agroquímica y Alimentaria',
-        description:
-          'Una integración fluida entre productos alimenticios y bioquímicos que ofrece alta productividad, rendimiento y versatilidad en la agricultura.',
-        icon: 'tabler:world-upload',
-      },
-      {
-        title: 'Componentes Listos para Usar',
-        description:
-          'Productos agrícolas listos para ser utilizados en cultivos comerciales, orgánicos, y pequeños negocios rurales.',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Mejores Prácticas',
-        description:
-          'Implementando técnicas seguras, eficientes y amigables con el medio ambiente, garantizando una producción sostenible y de alto valor.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excelente Productividad',
-        description:
-          'Mantener una alta productividad impacta positivamente en la rentabilidad del campo, mejora la calidad de los cultivos y aumenta la competitividad.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Optimización de Rendimiento',
-        description:
-          'Mejorar el rendimiento de los cultivos es clave para aumentar la producción y aprovechar al máximo los recursos disponibles.',
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Abiertos a Nuevas Ideas y Colaboraciones',
-        description:
-          'Adoptando una cultura abierta a nuevas ideas y colaboraciones, lo cual es fundamental para fomentar la innovación y un servicio dinámico al cliente.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
-  -->
-  <!-- Content Widget **************** -->
 
   <Content
     isReversed

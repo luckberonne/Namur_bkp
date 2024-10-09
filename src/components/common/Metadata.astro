@@ -2,10 +2,10 @@
 import merge from 'lodash.merge';
 import { AstroSeo } from '@astrolib/seo';
 
-import type { Props as AstroSeoProps } from '@astrolib/seo';
+import type { AstroSeoProps } from '@astrolib/seo/src/types';
 
-import { SITE, METADATA, I18N } from 'namur:config';
-import type { MetaData } from '~/types';
+import { SITE, METADATA, I18N } from '~/utils/config';
+import { MetaData } from '~/types';
 import { getCanonical } from '~/utils/permalinks';
 
 import { adaptOpenGraphImages } from '~/utils/images';

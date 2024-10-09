@@ -3,20 +3,24 @@ import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
 
-import { headerData, footerData } from '~/navigation';
+import { getHeaderData, getFooterData } from '~/navigation';
+import { MetaData } from '~/types';
+import { getLocaleFromUrl } from '~/i18n/translator';
+import { I18N } from '~/utils/config';
 
-import type { MetaData } from '~/types';
-
+const headerData = getHeaderData(getLocaleFromUrl(Astro.url));
+const footerData = getFooterData(getLocaleFromUrl(Astro.url));
 export interface Props {
   metadata?: MetaData;
 }
 
 const { metadata } = Astro.props;
+const showLanguagePicker = I18N.isEnabled;
 ---
 
 <Layout metadata={metadata}>
   <slot name="header">
-    <Header {...headerData} isSticky showToggleTheme={false} showToggleLanguage/>
+    <Header {...headerData} isSticky showRssFeed={false} showToggleTheme={false} showLanguagePicker={showLanguagePicker} />
   </slot>
   <main>
     <slot />

@@ -128,12 +128,6 @@
             "postsPerPage": {
               "type": "integer"
             },
-            "isRelatedPostsEnabled": {
-              "type": "boolean"
-            },
-            "relatedPostsCount": {
-              "type": "integer"
-            },
             "post": {
               "type": "object",
               "properties": {
@@ -266,9 +260,163 @@
       "properties": {
         "theme": {
           "type": "string"
+        },
+        "tokens": {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "object",
+              "properties": {
+                "colors": {
+                  "type": "object",
+                  "properties": {
+                    "default": {
+                      "type": "string"
+                    },
+                    "heading": {
+                      "type": "string"
+                    },
+                    "muted": {
+                      "type": "string"
+                    },
+                    "bgPage": {
+                      "type": "string"
+                    },
+                    "primary": {
+                      "type": "string"
+                    },
+                    "secondary": {
+                      "type": "string"
+                    },
+                    "accent": {
+                      "type": "string"
+                    },
+                    "info": {
+                      "type": "string"
+                    },
+                    "success": {
+                      "type": "string"
+                    },
+                    "warning": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    },
+                    "linkActive": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "default",
+                    "heading",
+                    "muted",
+                    "bgPage",
+                    "primary",
+                    "secondary",
+                    "accent",
+                    "info",
+                    "success",
+                    "warning",
+                    "error",
+                    "link",
+                    "linkActive"
+                  ]
+                },
+                "fonts": {
+                  "type": "object",
+                  "properties": {
+                    "sans": {
+                      "type": "string"
+                    },
+                    "serif": {
+                      "type": "string"
+                    },
+                    "heading": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["sans", "serif", "heading"]
+                }
+              },
+              "required": ["colors", "fonts"]
+            },
+            "dark": {
+              "type": "object",
+              "properties": {
+                "colors": {
+                  "type": "object",
+                  "properties": {
+                    "default": {
+                      "type": "string"
+                    },
+                    "heading": {
+                      "type": "string"
+                    },
+                    "muted": {
+                      "type": "string"
+                    },
+                    "bgPage": {
+                      "type": "string"
+                    },
+                    "primary": {
+                      "type": "string"
+                    },
+                    "secondary": {
+                      "type": "string"
+                    },
+                    "accent": {
+                      "type": "string"
+                    },
+                    "info": {
+                      "type": "string"
+                    },
+                    "success": {
+                      "type": "string"
+                    },
+                    "warning": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    },
+                    "linkActive": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "default",
+                    "heading",
+                    "muted",
+                    "bgPage",
+                    "primary",
+                    "secondary",
+                    "accent",
+                    "info",
+                    "success",
+                    "warning",
+                    "error",
+                    "link",
+                    "linkActive"
+                  ]
+                },
+                "fonts": {
+                  "type": "object"
+                }
+              },
+              "required": ["colors", "fonts"]
+            }
+          },
+          "required": ["default", "dark"]
         }
       },
-      "required": ["theme"]
+      "required": ["theme", "tokens"]
     }
   },
   "required": ["site", "metadata", "i18n", "apps", "analytics", "ui"]

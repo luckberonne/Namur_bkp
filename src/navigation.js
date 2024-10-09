@@ -1,42 +1,50 @@
-import { getPermalink } from './utils/permalinks';
+import { getLocalizedPermalink } from './utils/permalinks';
+import { useTranslations } from '~/i18n/translator';
 
-export const headerData = {
-  links: [
-    {
-      text: 'Sobre nosotros',
-      href: getPermalink('/about'),
-    },
-    {
-      text: 'Productos',
-      href: getPermalink('/productos')
-    },
-    {
-      text: 'Contacto',
-      href: getPermalink('/contact')
-    },
-  ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/namur', target: '_blank' }],
+export const getHeaderData = (locale) => {
+  const { t } = useTranslations(locale);
+  return {
+    links: [
+      {
+        text: t('header.aboutUs'),
+        href: getLocalizedPermalink(locale, '/about'),
+      },
+      {
+        text: t('header.products'),
+        href: getLocalizedPermalink(locale, '/products'),
+      },
+      {
+        text: t('header.contact'),
+        href: getLocalizedPermalink(locale, '/contact'),
+      },
+    ],
+    actions: [],
+  };
 };
 
-export const footerData = {
-  links: [
-    {
-      title: 'Product',
-      links: [
-        { text: 'Alimenticios', href: '#' },
-        { text: 'Agroquimicos', href: '#' }
-      ],
-    },
-    {
-      title: 'Contacto',
-      links: [
-        { text: 'Quiero Información', href: '#' },
-        { text: 'RRHH', href: '#' }
-      ],
-    },
-  ],
-  secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ]
+export const getFooterData = (locale) => {
+  const { t } = useTranslations(locale);
+  
+  return {
+    links: [
+      {
+        title: t('footer.product.title'),
+        links: [
+          { text: t('footer.product.alimenticios'), href: '#' },
+          { text: t('footer.product.agroquimicos'), href: '#' },
+        ],
+      },
+      {
+        title: t('footer.contact.title'),
+        links: [
+          { text: t('footer.contact.information'), href: '#' },
+          { text: t('footer.contact.rrhh'), href: '#' },
+        ],
+      },
+    ],
+    secondaryLinks: [
+      { text: t('footer.legal.terms'), href: getLocalizedPermalink(locale, '/terms') },
+      { text: t('footer.legal.privacyPolicy'), href: getLocalizedPermalink(locale, '/privacy') },
+    ],
+  };
 };
