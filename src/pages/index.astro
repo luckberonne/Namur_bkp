@@ -9,7 +9,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
 
 const { t } = useTranslations(getLocaleFromUrl(Astro.url));
-
+ 
 const metadata = {
   title: t('index.metadata.title'),
   ignoreTitleTemplate: true,
