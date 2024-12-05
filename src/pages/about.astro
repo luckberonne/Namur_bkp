@@ -1,10 +1,10 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import agro1 from '~/assets/videos/agro1.webm';
+
 
 const metadata = {
   title: 'About us',
@@ -15,6 +15,7 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
+    video={agro1}
     tagline="Sobre nosotros"
     image={{
       src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
@@ -34,7 +35,7 @@ const metadata = {
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Nuestro objetivo"
+    title="Our templates"
     subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
     columns={3}
     isBeforeContent={true}
@@ -112,7 +113,7 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Nuestros valores"
+    title="Our values"
     subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
     items={[
       {
@@ -136,7 +137,7 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Nuestros logros"
+    title="Achievements"
     subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
     isReversed={true}
     items={[
@@ -159,5 +160,4 @@ const metadata = {
       },
     ]}
   />
-
 </Layout>

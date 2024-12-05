@@ -6,6 +6,10 @@ export const getHeaderData = (locale) => {
   return {
     links: [
       {
+        text: t('header.home'),
+        href: getLocalizedPermalink(locale, '/'),
+      },
+      {
         text: t('header.aboutUs'),
         href: getLocalizedPermalink(locale, '/about'),
       },

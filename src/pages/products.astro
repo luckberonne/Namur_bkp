@@ -3,6 +3,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
+import p1 from '~/assets/images/products/1.jpg';
 
 const { t } = useTranslations(getLocaleFromUrl(Astro.url));
 
@@ -33,7 +34,7 @@ const metadata = {
       description:
         'Ofrecemos una variedad de semillas, fertilizantes y productos fitosanitarios de alta calidad para mejorar la productividad de tus cultivos.',
       icon: 'tabler:plant',
-      image: 'https://images.unsplash.com/photo-1732482124606-697008dab09c?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      image: p1
     },
     {
       title: 'Lino ',

@@ -1,8 +1,11 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import agro from '~/assets/videos/agro.webm';
+import varias from '~/assets/images/general/varias.jpg';
+import varias1 from '~/assets/images/general/varias1.jpg';
+
 
 import Hero from '~/components/widgets/Hero.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
@@ -20,6 +23,7 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
+  video={agro}
   >
     <Fragment slot="title">
       {t('index.hero.title.part1')} <span class="hidden xl:inline">{t('index.hero.title.part2')}</span>
@@ -54,7 +58,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?q=80&w=1388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: varias,
       alt: 'Colorful Image',
     }}
   >
@@ -95,7 +99,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1658996685337-3bd109a46605?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGFncm9wZWN1YXJpb3xlbnwwfHwwfHx8MA%3D%3D',
+      src: varias1,
       alt: 'Imagen de plano de trabajo',
     }}
   >
@@ -125,7 +129,7 @@ const metadata = {
           'Para empezar con Namur, solo necesitas acceso a internet para explorar nuestro catálogo en línea. Elige los productos que mejor se adapten a tus necesidades agrícolas y configúralos según tus requerimientos específicos.',
       },
       {
-        title: '¿Cómo solicitar un presupuesto  ?',
+        title: '¿Cómo se realiza un pedido con Namur?',
         description:
           'Es fácil. Simplemente selecciona los productos que deseas, personaliza tu pedido según tus necesidades, y completa la compra a través de nuestro sitio web. Te proporcionaremos actualizaciones y detalles de envío para asegurar una entrega puntual.',
       },
@@ -149,9 +153,9 @@ const metadata = {
     <Stats
       stats={[
         { title: 'Empresas que confían en nosotros', amount: '132' },
-        { title: '+ Importaciones realizadas', amount: '24.8K' },
-        { title: '+ Países conectados', amount: '10' },
-        { title: '+ Años de experiencia ', amount: '20' },
+        { title: 'Proyectos exitosos', amount: '24.8K' },
+        { title: 'Productos entregados', amount: '10.3K' },
+        { title: 'Clientes satisfechos', amount: '48.4K' },
       ]}
     />
 </Layout>

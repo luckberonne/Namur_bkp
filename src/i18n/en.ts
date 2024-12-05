@@ -1,5 +1,6 @@
 export const en = {
   header: {
+    home: 'Home',
     contact: 'Contact',
     products: 'Products',
     aboutUs: 'About Us',

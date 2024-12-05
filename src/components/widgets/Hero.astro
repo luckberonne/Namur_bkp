@@ -1,11 +1,10 @@
 ---
-import agro from '~/assets/videos/agro.mp4';
 
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
-
+  video,
   content = await Astro.slots.render('content'),
   id
 } = Astro.props;
@@ -19,7 +18,7 @@ const {
       muted 
       loop
     >
-      <source src={agro} type="video/mp4" />
+      <source src={video} type="video/mp4" />
       Tu navegador no soporta la reproducción de video.
     </video>
   </div>
