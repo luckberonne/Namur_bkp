@@ -1,5 +1,6 @@
 export const es = {
   header: {
+    home: 'Inicio',
     contact: 'Contacto',
     products: 'Productos',
     aboutUs: 'Sobre Nosotros',
