@@ -4,7 +4,9 @@ import Hero from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import agro1 from '~/assets/videos/agro1.webm';
+import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
 
+const { t } = useTranslations(getLocaleFromUrl(Astro.url));
 
 const metadata = {
   title: 'About us',
@@ -16,125 +18,73 @@ const metadata = {
 
   <Hero
     video={agro1}
-    tagline="Sobre nosotros"
+    
     image={{
       src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
       alt: 'Caos Image',
     }}
   >
     <Fragment slot="title">
-      Lo natural que alimenta tu felicidad <br />
-      <span class="text-accent dark:text-white highlight">Pe heko ypyva omongaruva nde vy'apavē</span>
+      {t('aboutUs.title')} <br />
+      <span class="text-accent dark:text-white highlight"></span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Somos .
+      {t('aboutUs.subtitle')}
     </Fragment>
   </Hero>
 
-  <!-- Features3 Widget ************** -->
-
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title={t('aboutUs.mision.title')}
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: t('aboutUs.mision.itemA'),
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+        t('aboutUs.mision.descriptionA'),
       },
       {
-        title: 'Interior Design',
+        title: t('aboutUs.mision.itemB'),
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+        t('aboutUs.mision.descriptionB'),
       },
       {
-        title: 'Photography',
+        title: t('aboutUs.mision.itemC'),
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+        t('aboutUs.mision.descriptionC'),
       },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
-
   <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
     image={{
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'Colorful Image',
     }}
   />
 
-  <!-- Steps2 Widget ****************** -->
-
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title={t('aboutUs.values.title')}
+    subtitle={t('aboutUs.values.subtitle')}
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Compromiso',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'Trabajamos con dedicación para garantizar la calidad en cada etapa del proceso.',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Confianza',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'Relaciones transparentes y duraderas con nuestros clientes y productores.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Amor por la naturaleza',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'Respetamos y promovemos',
       },
     ]}
   />
-
-  <!-- Steps2 Widget ****************** -->
 
   <Steps2
     title="Achievements"
