@@ -191,6 +191,7 @@ export interface ItemGrid {
   items?: Array<Item>;
   columns?: number;
   defaultIcon?: string;
+  defaultImage?: Image;
   classes?: Record<string, string>;
 }
 
@@ -246,6 +247,8 @@ export interface Features extends Headline, Widget {
   video?: Video;
   items: Array<Item>;
   columns: number;
+  map?: string;
+  address?: string;
   defaultIcon?: string;
   callToAction1?: CallToAction;
   callToAction2?: CallToAction;

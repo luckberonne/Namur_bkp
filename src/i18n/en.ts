@@ -125,7 +125,12 @@ export const en = {
       button: 'Send',
       message2: 'The response to this form may take 24 hours.'
     },
-    visit: 'Visit us!'
+    visit: 'Visit us!',
+    location: {
+      title: 'Dirección',
+      street: 'Cerro Corá 1234',
+      city: 'Asunción, Paraguay',
+    }
   },
 
 

@@ -1,4 +1,5 @@
 ---
+// Importaciones necesarias
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
@@ -14,9 +15,9 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
-
   <HeroText title={t('contact.title')} />
 
+  <!-- Contact Form ********************** -->
   <ContactUs
     id="form"
     title={t('contact.subtitle')}
@@ -37,21 +38,18 @@ const metadata = {
       label: t('contact.form.message'),
     }}
     disclaimer={{
-      label:t('contact.form.consent')
+      label: t('contact.form.consent'),
     }}
     description={t('contact.form.message2')}
   />
-  
-  <!-- Features2 Widget ************** -->
-  
-  <Features2
+
+  <!-- Features2 Widget y Google Map ********************** -->
+  <div class="flex flex-col items-center justify-center text-center mt-16">
+    <Features2
     title={t('contact.visit')}
-    items={[
-      {
-        title: 'Ubicación (aca quiero poner el mapa luquis) y centrarlo diría, pero vos que opinas ',
-        description: '1234 Calle Lorem Ipsum, 12345, Ciudad Agropecuaria, País',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
+    map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345091846!2d144.95592531531644!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5779f7c59d1c9e3!2sFederation+Square!5e0!3m2!1sen!2sau!4v1484787924477"
+    address="1234 Calle Lorem Ipsum, 12345, Ciudad Agropecuaria, País"
+    />
   
+  </div>
+</Layout>
