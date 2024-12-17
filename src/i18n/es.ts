@@ -28,9 +28,9 @@ export const es = {
     hero: {
       imageAlt: 'Imagen de NamurHero',
       title: {  
-        part1: 'Ventas y asesoramiento ',
-        part2: 'de productos agrícolas',
+        part1: 'Desde el corazón de Paraguay, te llevamos lo mejor de la naturaleza!',
       },
+      presubtitle: 'En ',
       subtitle: ', creemos en el poder de lo natural. Desde 2018, nos especializamos en ofrecer productos alimenticios de la más alta calidad para el mercado mayorista, tanto en Paraguay como para exportación. Nuestros productos, cuidadosamente seleccionados y procesados, garantizan frescura y sanidad en cada entrega. Nuestro compromiso es ser el puente entre productores y empresas, facilitando el acceso a ingredientes esenciales que alimentan no solo el cuerpo, sino también la felicidad y el bienestar.',
     }
   },

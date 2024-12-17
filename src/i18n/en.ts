@@ -28,9 +28,9 @@ export const en = {
     hero: {
       imageAlt: 'NamurHero image',
       title: {
-        part1: 'Sales and advice ',
-        part2: 'of agricultural products',
+        part1: 'From the heart of Paraguay, we bring you the best of nature!',
       },
+      presubtitle: 'At ',
       subtitle: ', we believe in the power of nature. Since 2018, we have specialized in offering food products of the highest quality for the wholesale market, both in Paraguay and for export. Our products, carefully selected and processed, guarantee freshness and health in each delivery. Our commitment is to be the bridge between producers and companies, facilitating access to essential ingredients that feed not only the body, but also happiness and well-being.',
     }
   },
