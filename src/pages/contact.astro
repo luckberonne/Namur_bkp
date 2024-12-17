@@ -3,6 +3,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
+
+const { t } = useTranslations(getLocaleFromUrl(Astro.url));
 
 const metadata = {
   title: 'Contact',
@@ -12,38 +15,37 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText title="¡Conéctate con nosotros!" />
+  <HeroText title={t('contact.title')} />
 
   <ContactUs
     id="form"
-    title="¡Envíanos un mensaje hoy mismo!"
-    subtitle="Para respuestas más rápidas, explora nuestra sección de Preguntas Frecuentes. ¡Podrías encontrar la solución que buscas allí mismo! Si no, háblanos al Whatsapp o envianos un mensaje a traves de nuestro formulario. Nuestro equipo de soporte estará encantado de ayudarte."
+    title={t('contact.subtitle')}
+    subtitle={t('contact.description')}
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Nombre',
+        label: t('contact.form.name'),
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Correo Electrónico',
+        label: t('contact.form.email'),
       },
     ]}
     textarea={{
-      label: 'Mensaje',
+      label: t('contact.form.message'),
     }}
     disclaimer={{
-      label:
-        'Al enviar este formulario de contacto, reconoces y aceptas la recopilación de tu información personal.',
+      label:t('contact.form.consent')
     }}
-    description="Nuestro equipo de soporte generalmente responde dentro de las 24 horas hábiles."
+    description={t('contact.form.message2')}
   />
   
   <!-- Features2 Widget ************** -->
   
   <Features2
-    title="Visítenos"
+    title={t('contact.visit')}
     items={[
       {
         title: 'Ubicación (aca quiero poner el mapa luquis) y centrarlo diría, pero vos que opinas ',

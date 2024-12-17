@@ -35,7 +35,7 @@ export const en = {
     }
   },
   aboutUs: {
-    title: 'The natural thing that feeds your happiness',
+    title: 'We love nature, we put the soul of Paraguay in each product.',
     subtitle: 'Founded in 2018, Namur was born with the aim of connecting people with food products that contribute to their well-being and health. From the beginning, we have focused on offering high-quality natural ingredients, supporting local producers and promoting the agricultural wealth of Paraguay. "The natural thing that feeds your happiness." or as we say "Pe heko ypyva omongaruva nde vy\' apavē" is more than a slogan, it is our philosophy.',
     mision: {
       title: 'Our mision',
@@ -50,15 +50,15 @@ export const en = {
     values: {
       title: 'Our Values',
       subtitle: 'At Namur, our values ​​are the basis of every action and decision. We believe that commitment, trust and tradition are essential to offer quality products that respect nature and people. Our passion for natural things drives us to guarantee food safety at every stage of the process.',
-      item1 : '',
-      subtitleI1: '',
-      item2: '',
-      subtitleI2: '',
-      item3: '',
-      subtitleI3: '',
+      item1 : 'Commitment',
+      subtitleI1: 'We work dedicatedly to guarantee quality at every stage of the process and ensure food safety.',
+      item2: 'Trust',
+      subtitleI2: 'The quality of our products is the basis of transparent and lasting relationships with our clients and producers.',
+      item3: 'Love for nature',
+      subtitleI3: 'We value natural resources and work responsibly to preserve them.',
     },
     achievements: {
-      title: '',
+      title: 'Achievements',
       subtitle: '',
       item1 : '',
       subtitleI1: '',
@@ -69,63 +69,63 @@ export const en = {
     }
   },
   products: {
-    title: '',
-    subtitle: '',
-    grillaProd: {
-      title: '',
-      subtitle: '',
+    title: 'The natural thing that feeds your happiness!',
+    subtitle: 'At Namur, we carefully select the best natural products to satisfy the needs of our customers. We specialize in offering high-quality ingredients, with reliable origin and processes that guarantee unmatched freshness, health and flavor. Each product we offer reflects our commitment to nature and the quality that our customers deserve. We work together with local producers to ensure that each delivery meets the most demanding standards and provides well-being to consumers. Discover our range of products and get ready for the new additions that will soon be added to our offer. Nature always has more to offer!',
+      grillaProd: {
+      title: 'Our Natural Products',
+      subtitle: 'At Namur, we offer a selection of natural products, carefully selected to ensure the best quality and freshness.',
 
       oregano: {
-        title: 'boooca',
+        title: 'Oregano',
         description: 'boca',
       },
       lino: {
-        title: 'boooca',
+        title: 'Lino',
         description: 'boca',
       },
       pasaDeUva: {
-        title: 'boooca',
+        title: 'Pasa de uva',
         description: 'boca',
       },
       chia: {
-        title: 'boooca',
+        title: 'Chía',
         description: 'boca',
       },
       sesamo: {
-        title: 'boooca',
+        title: 'Sesamo',
         description: 'boca',
       },
       coriandro: {
-        title: 'boooca',
+        title: 'Coriandro',
         description: 'boca',
       },
       albahaca: {
-        title: 'boooca',
+        title: 'Albahaca',
         description: 'boca',
       },
       romero: {
-        title: 'boooca',
+        title: 'Romero',
         description: 'boca',
       },
       proximamente: {
-        title: 'boooca',
-        description: 'boca',
+        title: 'Coming soon',
+        description: 'At Namur we continue to grow and expand our offer! Very soon we will incorporate new carefully selected natural products to offer you more variety and quality.',
       },
     }
   },
   contact: {
-    title: '',
-    subtitle: '',
-    description: '',
+    title: 'Connect with us!',
+    subtitle: 'Send us a message today!',
+    description: 'For quicker answers, explore our Frequently Asked Questions section. You could find the solution you are looking for right there! If not, talk to us on Whatsapp or send us a message through our form. Our team will be happy to help you.',
     form: {
-      name: '',
-      email: '',
-      message: '',
-      consent: '',
-      button: '',
-      message2: ''
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      consent: 'By submitting this contact form, you acknowledge and agree to the collection of your personal information. This information will be used only to help you and respond to your questions. At Namur, we respect your privacy and will not use your data for any other purpose.',
+      button: 'Send',
+      message2: 'The response to this form may take 24 hours.'
     },
-    visit: ''
+    visit: 'Visit us!'
   },
 
 
