@@ -39,6 +39,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           <a class="inline-block font-bold text-xl" href={getLocalizedHomePermalink(locale)}>{SITE?.name}</a>
         </div>
         <div class="text-sm text-muted">
+          Created by:
           {
             secondaryLinks.map(({ text, href }) => (
               <a
