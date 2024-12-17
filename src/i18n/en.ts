@@ -16,9 +16,9 @@ export const en = {
       information: "Contact Information",
       rrhh: "Human Resources"
     },
-    legal: {
-      terms: "Terms of Service",
-      privacyPolicy: "Privacy Policy"
+    creators: {
+      lucas: "Lucas Beronne",
+      nico: "Nicolas Costa"
     }
   },
   index: {

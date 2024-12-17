@@ -16,9 +16,9 @@ export const es = {
       information: "Información de Contacto",
       rrhh: "Recursos Humanos"
     },
-    legal: {
-      terms: "Términos de Servicio",
-      privacyPolicy: "Política de Privacidad"
+    creators: {
+      lucas: "Lucas Beronne",
+      nico: "Nicolas Costa"
     }
   },
   index: {
