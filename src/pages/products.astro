@@ -5,6 +5,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
 import p1 from '~/assets/images/products/1.jpg';
 import p2 from '~/assets/images/products/2.avif';
+import mainImage from '~/assets/images/general/mainProd.jpg';
+
+
 
 const { t } = useTranslations(getLocaleFromUrl(Astro.url));
 
@@ -19,6 +22,10 @@ const metadata = {
   <Hero
   title={t('products.title')}
   subtitle={t('products.subtitle')}  actions={[{ variant: 'primary', target: '_blank', text: 'Comienza a explorar', href: '/' }]}
+  image={{
+    src: mainImage,
+    alt: 'Product',
+  }}
   />
 
   <!-- Features2 Widget ************** -->

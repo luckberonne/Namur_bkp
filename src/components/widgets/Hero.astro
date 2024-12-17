@@ -1,10 +1,13 @@
 ---
+import { Image } from "astro:assets";
 
+// Obtener props
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
   video,
+  image = {}, // Imagen por defecto si no se proporciona video
   content = await Astro.slots.render('content'),
   id
 } = Astro.props;
@@ -12,15 +15,24 @@ const {
 
 <section class="relative md:-mt-[100px] not-prose" {...id ? { id } : {}}>
   <div class="absolute inset-0 z-0 overflow-hidden">
-    <video 
-      class="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none transform -translate-x-1/2 -translate-y-1/2" 
-      autoplay 
-      muted 
-      loop
-    >
-      <source src={video} type="video/mp4" />
-      Tu navegador no soporta la reproducción de video.
-    </video>
+    {video ? (
+      // Renderizar el video si existe
+      <video 
+        class="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none transform -translate-x-1/2 -translate-y-1/2" 
+        autoplay 
+        muted 
+        loop
+      >
+        <source src={video} type="video/mp4" />
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    ) : (
+      // Renderizar la imagen si no existe video
+      <Image 
+        src={image.src} 
+        alt={image.alt || 'Imagen de fondo'}
+        />
+    )}
   </div>
   
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
