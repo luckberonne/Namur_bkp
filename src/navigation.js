@@ -47,8 +47,15 @@ export const getFooterData = (locale) => {
       },
     ],
     secondaryLinks: [
-      { text: t('footer.legal.terms'), href: getLocalizedPermalink(locale, '/terms') },
-      { text: t('footer.legal.privacyPolicy'), href: getLocalizedPermalink(locale, '/privacy') },
+      { 
+        text: t('footer.creators.lucas'), 
+        href: 'https://github.com/luckberonne'
+      },
+      { 
+        text: t('footer.creators.nico'), 
+        href: 'https://github.com/Nicolas-Perez-Costa'
+      },
     ],
+    
   };
 };
