@@ -32,6 +32,24 @@ export const es = {
       },
       presubtitle: 'En ',
       subtitle: ', creemos en el poder de lo natural. Desde 2018, nos especializamos en ofrecer productos alimenticios de la más alta calidad para el mercado mayorista, tanto en Paraguay como para exportación. Nuestros productos, cuidadosamente seleccionados y procesados, garantizan frescura y sanidad en cada entrega. Nuestro compromiso es ser el puente entre productores y empresas, facilitando el acceso a ingredientes esenciales que alimentan no solo el cuerpo, sino también la felicidad y el bienestar.',
+    },
+    questions:{
+      title: '',
+      subtitle: '',
+      ask: {
+        first: '',
+        answerFirst: '',
+        second: '',
+        answerSecond: '',
+        third: '',
+        answerThird: '',
+        fourth: '',
+        answerFourth: '',
+        fifth: '',
+        answerFifth: '',
+        sixth: '',
+        answerSixth: '',
+      }
     }
   },
   aboutUs: {

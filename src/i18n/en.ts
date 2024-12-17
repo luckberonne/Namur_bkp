@@ -32,6 +32,24 @@ export const en = {
       },
       presubtitle: 'At ',
       subtitle: ', we believe in the power of nature. Since 2018, we have specialized in offering food products of the highest quality for the wholesale market, both in Paraguay and for export. Our products, carefully selected and processed, guarantee freshness and health in each delivery. Our commitment is to be the bridge between producers and companies, facilitating access to essential ingredients that feed not only the body, but also happiness and well-being.',
+    },
+    questions: {
+      title: '',
+      subtitle: '',
+      ask: {
+        first: '',
+        answerFirst: '',
+        second: '',
+        answerSecond: '',
+        third: '',
+        answerThird: '',
+        fourth: '',
+        answerFourth: '',
+        fifth: '',
+        answerFifth: '',
+        sixth: '',
+        answerSixth: '',
+      }
     }
   },
   aboutUs: {
