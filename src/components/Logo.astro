@@ -1,9 +1,11 @@
 ---
-import { SITE } from 'namur:config';
-import logo from "~/assets/svgs/logo.svg?raw"; 
-
+import { SITE } from '~/utils/config';
+import logo from "~/assets/svgs/logo3.png"; 
+import { Image } from 'astro:assets';
 ---
 
 <span class="flex items-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-  <Fragment set:html={logo} class="mr-2"/> {SITE?.name}
+  <Image src={logo} alt={SITE.name} class="w-32" />
+
 </span>
+

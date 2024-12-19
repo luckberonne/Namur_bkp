@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import wpp from '~/assets/images/whatsapp.png';
+
+const phoneNumber = "+595984107621"; 
+const message = "¡Hola! Me gustaría recibir más información sobre los productos de Namur."; 
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+---
+
+<a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"
+   class="fixed bottom-5 right-5 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 z-50">
+  <Image src={wpp} alt="WhatsApp" class="w-8 h-8" />
+</a>

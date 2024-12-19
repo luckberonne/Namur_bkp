@@ -1,18 +1,22 @@
 ---
-import type { ItemGrid as Props } from '~/types';
-import { Icon } from 'astro-icon/components';
-import { twMerge } from 'tailwind-merge';
-import Button from './Button.astro';
-
-const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
+import { twMerge } from "tailwind-merge";
+import type { ItemGrid } from "~/types";
+import CTA from "./CTA.astro";
+import { Image } from "astro:assets";
 
 const {
-  container: containerClass = '',
-  // container: containerClass = "sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
-  panel: panelClass = '',
-  title: titleClass = '',
-  description: descriptionClass = '',
-  icon: defaultIconClass = 'text-primary',
+  items = [],
+  columns,
+  defaultImage = "",
+  classes = {},
+} = Astro.props as ItemGrid;
+
+const {
+  container: containerClass = "",
+  panel: panelClass = "",
+  title: titleClass = "",
+  description: descriptionClass = "",
+  image: defaultImageClass = "w-48 h-48 rounded-full overflow-hidden",
 } = classes;
 ---
 
@@ -22,32 +26,81 @@ const {
       class={twMerge(
         `grid gap-8 gap-x-12 sm:gap-y-8 ${
           columns === 4
-            ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
+            ? "lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2"
             : columns === 3
-              ? 'lg:grid-cols-3 sm:grid-cols-2'
-              : columns === 2
-                ? 'sm:grid-cols-2 '
-                : ''
+            ? "lg:grid-cols-3 sm:grid-cols-2"
+            : columns === 2
+            ? "sm:grid-cols-2 "
+            : ""
         }`,
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
-        <div class={twMerge('relative flex flex-col', panelClass, itemClasses?.panel)}>
-          {(icon || defaultIcon) && (
-            <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
-          )}
-          <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
-          {description && (
-            <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
-          )}
-          {callToAction && (
-            <div class="mt-2">
-              <Button {...callToAction} />
+      {items.map(
+        ({
+          title,
+          description,
+          image,
+          callToAction,
+          classes: itemClasses = {},
+        }) => (
+          <div
+            class={twMerge(
+              "relative flex flex-col items-center text-center",
+              panelClass,
+              itemClasses?.panel
+            )}
+          >
+            {(image || defaultImage) && (
+              <div 
+                class={twMerge(
+                  "mb-4 rounded-full overflow-hidden flex items-center justify-center bg-gray-100", 
+                  defaultImageClass, 
+                  itemClasses?.image
+                )}
+              >
+                {typeof image === 'string' ? (
+                  <img
+                    src={image || defaultImage}
+                    alt={title}
+                    class="w-full h-full object-cover"
+                  />
+                ) : (
+                  <Image
+                    src={image || defaultImage}
+                    alt={title || "Image"}
+                    class="w-full h-full object-cover"
+                  />
+                )}
+              </div>
+            )}
+            <div
+              class={twMerge(
+                "text-xl font-bold",
+                titleClass,
+                itemClasses?.title
+              )}
+            >
+              {title}
             </div>
-          )}
-        </div>
-      ))}
+            {description && (
+              <p
+                class={twMerge(
+                  "text-muted mt-2",
+                  descriptionClass,
+                  itemClasses?.description
+                )}
+                set:html={description}
+              />
+            )}
+            {callToAction && (
+              <div class="mt-2 text-primary cursor-pointer">
+                <CTA callToAction={callToAction} />
+              </div>
+            )}
+          </div>
+        )
+      )}
     </div>
   )
 }

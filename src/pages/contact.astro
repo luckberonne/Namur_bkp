@@ -1,8 +1,12 @@
 ---
+// Importaciones necesarias
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
+
+const { t } = useTranslations(getLocaleFromUrl(Astro.url));
 
 const metadata = {
   title: 'Contact',
@@ -11,69 +15,31 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
+  <HeroText title={t('contact.title')} />
 
-  <HeroText tagline="Contacto" title="¡Conéctate con nosotros!" />
-
+  <!-- Contact Form ********************** -->
   <ContactUs
     id="form"
-    title="¡Envíanos un mensaje hoy mismo!"
-    subtitle="Para respuestas más rápidas, explora nuestra sección de Preguntas Frecuentes. ¡Podrías encontrar la solución que buscas allí mismo! Si no, nuestro equipo de soporte estará encantado de ayudarte."
+    title={t('contact.subtitle')}
+    subtitle={t('contact.description')}
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Nombre',
+        label: t('contact.form.name'),
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Correo Electrónico',
+        label: t('contact.form.email'),
       },
     ]}
     textarea={{
-      label: 'Mensaje',
+      label: t('contact.form.message'),
     }}
     disclaimer={{
-      label:
-        'Al enviar este formulario de contacto, reconoces y aceptas la recopilación de tu información personal.',
+      label: t('contact.form.consent'),
     }}
-    description="Nuestro equipo de soporte generalmente responde dentro de las 24 horas hábiles."
+    description={t('contact.form.message2')}
   />
-  
-  <!-- Features2 Widget ************** -->
-  
-  <Features2
-    title="¡Estamos aquí para ayudarte!"
-    items={[
-      {
-        title: 'Soporte General',
-        description: `Habla con nosotros para consultas relacionadas con la gestión de cuentas, navegación del sitio web, problemas de pago, acceso a productos adquiridos o preguntas generales sobre la funcionalidad del sitio.`,
-      },
-      {
-        title: 'Contacto con Ventas',
-        description:
-          'Habla con nosotros para preguntas sobre compras, opciones de personalización, licencias para uso comercial, consultas sobre productos específicos, etc.',
-      },
-      {
-        title: 'Soporte Técnico',
-        description:
-          'Habla con nosotros si enfrentas problemas técnicos como instalación de productos, dificultades de edición, problemas de compatibilidad con software o errores de descarga, u otros desafíos técnicos relacionados con el uso de los productos.',
-      },
-      {
-        title: 'Teléfono',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Correo Electrónico',
-        description: 'contacto@namur.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Ubicación',
-        description: '1234 Calle Lorem Ipsum, 12345, Ciudad Agropecuaria, País',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
-  
+</Layout>

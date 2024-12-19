@@ -1,128 +1,63 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import agro from '~/assets/videos/agro.webm';
+import varias from '~/assets/images/general/varias.jpg';
+import varias1 from '~/assets/images/general/varias1.jpg';
+
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
 
+const { t } = useTranslations(getLocaleFromUrl(Astro.url));
+ 
 const metadata = {
-  title: 'Namur — Soluciones Agropecuarias',
-  description: 'Descubre Namur, tu socio ideal para soluciones agropecuarias. Ofrecemos productos agrícolas, asesoría técnica para maximizar la productividad y eficiencia.',
-  keywords: 'Namur, soluciones agropecuarias, productos agrícolas, plantillas web, Astro, Tailwind CSS, asesoría técnica, eficiencia agrícola',
+  title: t('index.metadata.title'),
+  ignoreTitleTemplate: true,
 };
-
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
   <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Productos',
-        href: 'https://github.com/onwidget/namur',
-        target: '_blank',
-        icon: 'tabler:click',
-      },
-      { text: 'Contactenos', href: '#features' },
-    ]}
+  video={agro}
   >
     <Fragment slot="title">
-      Venta y asesoria <span class="hidden xl:inline">de productos agricolas</span>
-      <span class="text-accent dark:text-white highlight"> Namur</span>
+      {t('index.hero.title.part1')} <span class="hidden xl:inline"></span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Namur</span> es una empresa dedicada a la venta de productos agrícolas, tanto alimenticios
-        como bioquímicos. Ofrece semillas, fertilizantes, pesticidas y soluciones de manejo de cultivos, enfocándose en la
-        productividad y la sostenibilidad. Además, brinda asesoría técnica para optimizar los resultados de sus clientes
-        en el campo.</span
+        {t('index.hero.presubtitle')}<span class="font-semibold">Namur </span>{t('index.hero.subtitle')}</span
       >
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-
-  <Note />
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    tagline="Características"
-    title="Lo que obtienes con Namur"
-    subtitle="Una de las soluciones agrícolas más profesionales y completas del mercado. Reconocida por su enfoque en calidad y sostenibilidad en 2022."
-    items={[
-      {
-        title: 'Integración Agroquímica y Alimentaria',
-        description:
-          'Una integración fluida entre productos alimenticios y bioquímicos que ofrece alta productividad, rendimiento y versatilidad en la agricultura.',
-        icon: 'tabler:world-upload',
-      },
-      {
-        title: 'Componentes Listos para Usar',
-        description:
-          'Productos agrícolas listos para ser utilizados en cultivos comerciales, orgánicos, y pequeños negocios rurales.',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Mejores Prácticas',
-        description:
-          'Implementando técnicas seguras, eficientes y amigables con el medio ambiente, garantizando una producción sostenible y de alto valor.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excelente Productividad',
-        description:
-          'Mantener una alta productividad impacta positivamente en la rentabilidad del campo, mejora la calidad de los cultivos y aumenta la competitividad.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Optimización de Rendimiento',
-        description:
-          'Mejorar el rendimiento de los cultivos es clave para aumentar la producción y aprovechar al máximo los recursos disponibles.',
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Abiertos a Nuevas Ideas y Colaboraciones',
-        description:
-          'Adoptando una cultura abierta a nuevas ideas y colaboraciones, lo cual es fundamental para fomentar la innovación y un servicio dinámico al cliente.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
-
   <Content
     isReversed
-    tagline="¡El Modelo de Namur: Mejora y Funcionalidad!"
-    title="Obtén una ventaja competitiva en la industria."
+    title="Conoce nuestra forma de trabajar."
     items={[
       {
-        title: 'Desarrollado con Innovación Agrícola',
+        title: 'Certificación BPA',
         description:
-          'Beneficiándote de las últimas tecnologías y enfoques en agricultura para maximizar el rendimiento y la eficiencia.',
+          'Las BPA son un conjunto de prácticas que buscan optimizar la producción agrícola, minimizando el impacto ambiental y asegurando la inocuidad de los alimentos.',
       },
       {
-        title: 'Estilizado con Sostenibilidad',
+        title: 'Certificación Fairtrade',
         description:
-          'Facilitando un crecimiento rápido y uniforme con prácticas agrícolas sostenibles y respetuosas con el medio ambiente.',
+          'Fairtrade garantiza que los productores reciben un precio justo por sus productos y trabajan en condiciones laborales adecuadas.',
       },
       {
-        title: 'Compatibilidad Multiterreno',
+        title: 'Certifiación GlobalGAP',
         description:
-          'Asegura que tus cultivos se desarrollen de manera consistente en diversas condiciones, brindando una experiencia óptima en cualquier entorno agrícola.',
+          'GlobalGAP es un estándar internacional que asegura que los productos agrícolas se producen de manera segura y responsable, cumpliendo con requisitos ambientales y sociales.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?q=80&w=1388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: varias,
       alt: 'Colorful Image',
     }}
   >
@@ -163,7 +98,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1658996685337-3bd109a46605?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGFncm9wZWN1YXJpb3xlbnwwfHwwfHx8MA%3D%3D',
+      src: varias1,
       alt: 'Imagen de plano de trabajo',
     }}
   >
@@ -173,44 +108,6 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Obtén los productos agropecuarios que necesitas con Namur de manera rápida y sencilla."
-    items={[
-      {
-        title: 'Paso 1: <span class="font-medium">Selecciona tus productos</span>',
-        description:
-          'Explora nuestro catálogo en línea y elige los productos agropecuarios que mejor se adapten a tus necesidades. Desde semillas hasta bioquímicos, encuentra todo lo que necesitas para tu campo.',
-        icon: 'tabler:shopping-cart',
-      },
-      {
-        title: 'Paso 2: <span class="font-medium">Personaliza tu pedido</span>',
-        description:
-          'Configura la cantidad y especificaciones de los productos que has seleccionado. Ajusta tu pedido para asegurarte de que estás recibiendo exactamente lo que necesitas para optimizar tu producción.',
-        icon: 'tabler:adjustments',
-      },
-      {
-        title: 'Paso 3: <span class="font-medium">Realiza tu compra</span>',
-        description:
-          'Confirma tu pedido y elige el método de pago que más te convenga. Namur se encargará de que tus productos lleguen a tiempo y en perfectas condiciones para que puedas comenzar a utilizarlos de inmediato.',
-        icon: 'tabler:credit-card',
-      },
-      {
-        title: '¡Listo!',
-        description:
-          'Tus productos están en camino, y tu campo está a punto de recibir lo mejor que Namur tiene para ofrecer.',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Imagen de pasos agropecuarios',
-    }}
-  />
 
   <!-- FAQs Widget ******************* -->
 

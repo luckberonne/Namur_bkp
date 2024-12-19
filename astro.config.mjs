@@ -1,37 +1,65 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import { defineConfig, squooshImageService } from 'astro/config';
+import { defineConfig } from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
+import { i18n, filterSitemapByDefaultLocale } from "astro-i18n-aut/integration";
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
-import icon from 'astro-icon';
 import compress from 'astro-compress';
+import icon from 'astro-icon';
+import tasks from "./src/utils/tasks";
 
-import namur from './vendor/integration';
+import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
-import {
-  readingTimeRemarkPlugin,
-  responsiveTablesRehypePlugin,
-  lazyImagesRehypePlugin,
-} from './src/utils/frontmatter.mjs';
+import { ANALYTICS, SITE, I18N } from './src/utils/config.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const hasExternalScripts = false;
 const whenExternalScripts = (items = []) =>
-  hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
+  ANALYTICS.vendors.googleAnalytics.id && ANALYTICS.vendors.googleAnalytics.partytown
+    ? Array.isArray(items)
+      ? items.map((item) => item())
+      : [items()]
+    : [];
 
 export default defineConfig({
+  site: SITE.site,
+  base: SITE.base,
+  trailingSlash: SITE.trailingSlash ? 'always' : 'never',
+  
+  build: {
+    format: SITE.trailingSlash ? "directory" : "file"
+  },
+
   output: 'static',
 
   integrations: [
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    
+    // Conditionally add i18n and sitemap based on I18N.isEnabled
+    ...(I18N.isEnabled
+      ? [
+          i18n({
+            locales: I18N.locales,
+            defaultLocale: I18N.defaultLocale,
+          }),
+          sitemap({
+            i18n: {
+              locales: I18N.locales,
+              defaultLocale: I18N.defaultLocale,
+            },
+            filter: filterSitemapByDefaultLocale({ defaultLocale: I18N.defaultLocale }),
+          }),
+        ]
+      : [
+          sitemap({}),
+        ]),
+    
     mdx(),
     icon({
       include: {
@@ -56,32 +84,22 @@ export default defineConfig({
       })
     ),
 
+    tasks(),
+
     compress({
       CSS: true,
       HTML: {
-        'html-minifier-terser': {
-          removeAttributeQuotes: false,
-        },
+        removeAttributeQuotes: false,
       },
       Image: false,
       JavaScript: true,
-      SVG: false,
+      SVG: true,
       Logger: 1,
-    }),
-
-    namur({
-      config: './src/config.yaml',
     }),
   ],
 
-  image: {
-    service: squooshImageService(),
-    domains: ['cdn.pixabay.com'],
-  },
-
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
-    rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
   },
 
   vite: {

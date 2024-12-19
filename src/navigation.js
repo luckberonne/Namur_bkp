@@ -1,103 +1,61 @@
-import { getPermalink } from './utils/permalinks';
+import { getLocalizedPermalink } from './utils/permalinks';
+import { useTranslations } from '~/i18n/translator';
 
-export const headerData = {
-  links: [
-    {
-      text: 'Inicio',
-      links: [
-        {
-          text: 'Sobre Nosotros',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Nuestros Valores',
-          href: getPermalink('/terms'),
-        },
-      ],
-    },
-    {
-      text: 'Productos',
-      links: [
-        {
-          text: 'Alimenticios',
-          href: getPermalink('/services'),
-        },
-        {
-          text: 'Agroquimicos',
-          href: getPermalink('/services'),
-        },
-      ],
-    },
-    {
-      text: 'Servicios',
-      links: [
-        {
-          text: 'Consultoría en aspectos regulatorios',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'Registro de agroquímicos',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'Representación legal y comercial',
-          href: getPermalink('/pricing'),
-        },
-      ],
-    },
-    {
-      text: 'Contacto',
-      links: [
-        {
-          text: 'Quiero Información',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'RRHH',
-          href: getPermalink('/contact'),
-        },
-      ],
-    },
-  ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/namur', target: '_blank' }],
+export const getHeaderData = (locale) => {
+  const { t } = useTranslations(locale);
+  return {
+    links: [
+      {
+        text: t('header.home'),
+        href: getLocalizedPermalink(locale, '/'),
+      },
+      {
+        text: t('header.aboutUs'),
+        href: getLocalizedPermalink(locale, '/about'),
+      },
+      {
+        text: t('header.products'),
+        href: getLocalizedPermalink(locale, '/products'),
+      },
+      {
+        text: t('header.contact'),
+        href: getLocalizedPermalink(locale, '/contact'),
+      },
+    ],
+    actions: [],
+  };
 };
 
-export const footerData = {
-  links: [
-    {
-      title: 'Product',
-      links: [
-        { text: 'Alimenticios', href: '#' },
-        { text: 'Agroquimicos', href: '#' }
-      ],
-    },
-    {
-      title: 'Servicios',
-      links: [
-        { text: 'Consultoría en aspectos regulatorios', href: '#' },
-        { text: 'Registro de agroquímicos', href: '#' },
-        { text: 'Representación legal y comercial', href: '#' }
-      ],
-    },
-    {
-      title: 'Contacto',
-      links: [
-        { text: 'Quiero Información', href: '#' },
-        { text: 'RRHH', href: '#' }
-      ],
-    },
-  ],
-  secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
-  socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-  ],
-  footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/luckberonne"> Lucas Beronne</a> y <a class="text-blue-600 underline dark:text-muted" href="https://github.com/Nicolas-Perez-Costa"> Nicolas Costa</a> · All rights reserved.
-  `,
+export const getFooterData = (locale) => {
+  const { t } = useTranslations(locale);
+  
+  return {
+    links: [
+      {
+        title: t('footer.product.title'),
+        links: [
+          { text: t('footer.product.alimenticios'), href: '#' },
+          { text: t('footer.product.agroquimicos'), href: '#' },
+        ],
+      },
+      {
+        title: t('footer.contact.title'),
+        links: [
+          { text: t('footer.contact.information'), href: '#' },
+          { text: t('footer.contact.rrhh'), href: '#' },
+        ],
+      },
+    ],
+    secondaryLinks: [
+      { 
+        text: t('footer.creators.lucas'), 
+        href: 'https://github.com/luckberonne'
+      },
+      { 
+        text: t('footer.creators.nico'), 
+        href: 'https://github.com/Nicolas-Perez-Costa'
+      },
+    ],
+    
+  };
 };

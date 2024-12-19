@@ -1,20 +1,7 @@
 ---
-import agro from '~/assets/videos/agro.mp4';
-
-
-export interface Props {
-  isDark?: boolean;
-}
-
 const { isDark = false } = Astro.props;
 ---
 
-<div class:list={['relative', { 'bg-dark dark:bg-transparent': isDark }]}>
-  <video autoplay loop muted playsinline class="absolute inset-0 object-cover w-full h-full">
-    <source src={agro} type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <div class="relative z-10">
-    <slot />
-  </div>
+<div class:list={["absolute inset-0", { "bg-dark dark:bg-transparent": isDark }]}>
+<slot />
 </div>
