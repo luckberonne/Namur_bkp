@@ -111,35 +111,35 @@ export const en = {
 
       oregano: {
         title: 'Oregano',
-        description: 'boca',
+        description: 'Data to load',
       },
       lino: {
         title: 'Lino',
-        description: 'boca',
+        description: 'Data to load',
       },
       pasaDeUva: {
         title: 'Pasa de uva',
-        description: 'boca',
-      },
-      chia: {
-        title: 'Chía',
-        description: 'boca',
-      },
-      sesamo: {
-        title: 'Sesamo',
-        description: 'boca',
+        description: 'Data to load',
       },
       coriandro: {
         title: 'Coriandro',
-        description: 'boca',
-      },
-      albahaca: {
-        title: 'Albahaca',
-        description: 'boca',
+        description: 'Data to load',
       },
       romero: {
         title: 'Romero',
-        description: 'boca',
+        description: 'Data to load',
+      },
+      ajoEnPolvo: {
+        title: 'Ajo en Polvo',
+        description: 'Data to load',
+      },
+      sesamo: {
+        title: 'Sesamo',
+        description: 'Data to load',
+      },
+      albahaca: {
+        title: 'Albahaca',
+        description: 'Data to load',
       },
       proximamente: {
         title: 'Coming soon',

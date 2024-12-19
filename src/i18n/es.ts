@@ -110,36 +110,38 @@ export const es = {
 
       oregano: {
         title: 'Oregano',
-        description: 'boca',
+        description: 'Datos por cargar',
       },
       lino: {
         title: 'Lino',
-        description: 'boca',
+        description: 'Datos por cargar',
       },
       pasaDeUva: {
         title: 'Pasa de uva',
-        description: 'boca',
-      },
-      chia: {
-        title: 'Chía',
-        description: 'boca',
-      },
-      sesamo: {
-        title: 'Sesamo',
-        description: 'boca',
+        description: 'Datos por cargar',
       },
       coriandro: {
         title: 'Coriandro',
-        description: 'boca',
-      },
-      albahaca: {
-        title: 'Albahaca',
-        description: 'boca',
+        description: 'Datos por cargar',
       },
       romero: {
         title: 'Romero',
-        description: 'boca',
+        description: 'Datos por cargar',
       },
+      ajoEnPolvo: {
+        title: 'Ajo en Polvo',
+        description: 'Datos por cargar',
+      },
+      sesamo: {
+        title: 'Sesamo',
+        description: 'Datos por cargar',
+      },
+      
+      albahaca: {
+        title: 'Albahaca',
+        description: 'Datos por cargar',
+      },
+      
       proximamente: {
         title: 'Proximamente',
         description: '¡En Namur seguimos creciendo y expandiendo nuestra oferta! Muy pronto incorporaremos nuevos productos naturales cuidadosamente seleccionados para ofrecerte más variedad y calidad.',
