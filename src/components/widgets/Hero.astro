@@ -16,7 +16,6 @@ const {
 <section class="relative md:-mt-[100px] not-prose" {...id ? { id } : {}}>
   <div class="absolute inset-0 z-0 overflow-hidden">
     {video ? (
-      // Renderizar el video si existe
       <video 
         class="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none transform -translate-x-1/2 -translate-y-1/2" 
         autoplay 
@@ -26,12 +25,13 @@ const {
         <source src={video} type="video/mp4" />
         Tu navegador no soporta la reproducción de video.
       </video>
-    ) : (
-      // Renderizar la imagen si no existe video
+    ) : image.src ? (
       <Image 
         src={image.src} 
-        alt={image.alt || 'Imagen de fondo'}
-        />
+        alt={image.alt || 'Imagen de fondo'} 
+      />
+    ) : (
+      <p>Contenido multimedia no disponible</p>
     )}
   </div>
   
