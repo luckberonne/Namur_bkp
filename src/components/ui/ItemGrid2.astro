@@ -1,106 +1,122 @@
 ---
 import { twMerge } from "tailwind-merge";
+import ImageModal from './ImageModal.astro';
 import type { ItemGrid } from "~/types";
 import CTA from "./CTA.astro";
 import { Image } from "astro:assets";
 
 const {
-  items = [],
-  columns,
-  defaultImage = "",
-  classes = {},
+ items = [],
+ columns,
+ defaultImage = "",
+ classes = {},
 } = Astro.props as ItemGrid;
 
 const {
-  container: containerClass = "",
-  panel: panelClass = "",
-  title: titleClass = "",
-  description: descriptionClass = "",
-  image: defaultImageClass = "w-48 h-48 rounded-full overflow-hidden",
+ container: containerClass = "",
+ panel: panelClass = "",
+ title: titleClass = "",
+ description: descriptionClass = "",
+ image: defaultImageClass = "w-48 h-48 rounded-full overflow-hidden",
 } = classes;
 ---
 
 {
-  items && (
-    <div
-      class={twMerge(
-        `grid gap-8 gap-x-12 sm:gap-y-8 ${
-          columns === 4
-            ? "lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2"
-            : columns === 3
-            ? "lg:grid-cols-3 sm:grid-cols-2"
-            : columns === 2
-            ? "sm:grid-cols-2 "
-            : ""
-        }`,
-        containerClass
-      )}
-    >
-      {items.map(
-        ({
-          title,
-          description,
-          image,
-          callToAction,
-          classes: itemClasses = {},
-        }) => (
-          <div
-            class={twMerge(
-              "relative flex flex-col items-center text-center",
-              panelClass,
-              itemClasses?.panel
-            )}
-          >
-            {(image || defaultImage) && (
-              <div 
-                class={twMerge(
-                  "mb-4 rounded-full overflow-hidden flex items-center justify-center bg-gray-100", 
-                  defaultImageClass, 
-                  itemClasses?.image
-                )}
-              >
-                {typeof image === 'string' ? (
-                  <img
-                    src={image || defaultImage}
-                    alt={title}
-                    class="w-full h-full object-cover"
-                  />
-                ) : (
-                  <Image
-                    src={image || defaultImage}
-                    alt={title || "Image"}
-                    class="w-full h-full object-cover"
-                  />
-                )}
-              </div>
-            )}
-            <div
-              class={twMerge(
-                "text-xl font-bold",
-                titleClass,
-                itemClasses?.title
-              )}
-            >
-              {title}
-            </div>
-            {description && (
-              <p
-                class={twMerge(
-                  "text-muted mt-2",
-                  descriptionClass,
-                  itemClasses?.description
-                )}
-                set:html={description}
-              />
-            )}
-            {callToAction && (
-              <div class="mt-2 text-primary cursor-pointer">
-                <CTA callToAction={callToAction} />
-              </div>
-            )}
-          </div>
-        )
-      )}
-    </div>
-  )
+ items && (
+   <>
+     <div
+       class={twMerge(
+         `grid gap-8 gap-x-12 sm:gap-y-8 ${
+           columns === 4
+             ? "lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2"
+             : columns === 3
+             ? "lg:grid-cols-3 sm:grid-cols-2"
+             : columns === 2
+             ? "sm:grid-cols-2 "
+             : ""
+         }`,
+         containerClass
+       )}
+     >
+       {items.map(
+         ({
+           title,
+           description,
+           image,
+           callToAction,
+           classes: itemClasses = {},
+         }) => (
+           <div
+             class={twMerge(
+               "relative flex flex-col items-center text-center",
+               panelClass,
+               itemClasses?.panel
+             )}
+           >
+             {(image || defaultImage) && (
+               <div 
+                 class={twMerge(
+                   "mb-4 rounded-full overflow-hidden flex items-center justify-center bg-gray-100", 
+                   defaultImageClass, 
+                   itemClasses?.image
+                 )}
+               >
+                 {typeof image === 'string' ? (
+                   <img
+                     src={image || defaultImage}
+                     alt={title}
+                     class="w-full h-full object-cover cursor-pointer img-modal"
+                   />
+                 ) : (
+                   <Image
+                     src={image || defaultImage}
+                     alt={title || "Image"}
+                     class="w-full h-full object-cover cursor-pointer img-modal"
+                   />
+                 )}
+               </div>
+             )}
+             <div
+               class={twMerge(
+                 "text-xl font-bold",
+                 titleClass,
+                 itemClasses?.title
+               )}
+             >
+               {title}
+             </div>
+             {description && (
+               <p
+                 class={twMerge(
+                   "text-muted mt-2",
+                   descriptionClass,
+                   itemClasses?.description
+                 )}
+                 set:html={description}
+               />
+             )}
+             {callToAction && (
+               <div class="mt-2 text-primary cursor-pointer">
+                 <CTA callToAction={callToAction} />
+               </div>
+             )}
+           </div>
+         )
+       )}
+     </div>
+
+     <ImageModal />
+
+     <script>
+       document.querySelectorAll('.img-modal').forEach(img => {
+         img.addEventListener('click', () => {
+           const modal = document.getElementById('imageModal');
+           const modalImg = document.getElementById('modalImage');
+           modal.classList.remove('hidden');
+           modalImg.src = img.src;
+         });
+       });
+     </script>
+   </>
+ )
 }

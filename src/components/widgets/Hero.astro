@@ -17,7 +17,7 @@ const {
   <div class="absolute inset-0 z-0 overflow-hidden">
     {video ? (
       <video 
-        class="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none transform -translate-x-1/2 -translate-y-1/2" 
+        class="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none transform -translate-x-1/2 -translate-y-1/2 object-cover" 
         autoplay 
         muted 
         loop
@@ -28,34 +28,45 @@ const {
     ) : image.src ? (
       <Image 
         src={image.src} 
-        alt={image.alt || 'Imagen de fondo'} 
+        alt={image.alt || 'Imagen de fondo'}
+        class="object-cover w-full h-full"
       />
     ) : (
       <p>Contenido multimedia no disponible</p>
     )}
   </div>
-  
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
+
+  <!-- Overlay oscuro y desenfoque más suave detrás del texto -->
+  <div class="absolute inset-0 bg-black opacity-40 z-10"></div> <!-- Overlay oscuro -->
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 z-20">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
     <div class="py-12 md:py-20">
       <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
-        {tagline && (
-          <p
-            class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
-            set:html={tagline}
-          />
-        )}
-        {title && (
-          <h1
-            class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
-            set:html={title}
-          />
-        )}
-        <div class="max-w-3xl mx-auto">
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
+        <!-- Contenedor para texto -->
+        <div class="relative z-20 px-4 sm:px-6">
+          {tagline && (
+            <p
+              class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
+              set:html={tagline}
+            />
+          )}
+          {title && (
+            <h1
+              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+              set:html={title}
+            />
+          )}
+          <div class="max-w-3xl mx-auto color">
+            {subtitle && <p class="text-xl text-muted mb-6 text-slate-300" set:html={subtitle} />}
+          </div>
+          {content && <Fragment set:html={content} />}
         </div>
-        {content && <Fragment set:html={content} />}
       </div>
     </div>
   </div>
+
+  <!-- Fondo desenfocado solo detrás del texto -->
+  <div class="absolute inset-0 filter blur-sm z-0"></div> <!-- Fondo desenfocado -->
 </section>
+
