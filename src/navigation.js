@@ -34,15 +34,18 @@ export const getFooterData = (locale) => {
       {
         title: t('footer.product.title'),
         links: [
-          { text: t('footer.product.alimenticios'), href: '#' },
-          { text: t('footer.product.agroquimicos'), href: '#' },
+          { text: t('footer.product.about'), 
+            href: getLocalizedPermalink(locale, '/about') 
+          },
+          { text: t('footer.product.products'), 
+            href: getLocalizedPermalink(locale, '/products') 
+          },
         ],
       },
       {
         title: t('footer.contact.title'),
         links: [
-          { text: t('footer.contact.information'), href: '#' },
-          { text: t('footer.contact.rrhh'), href: '#' },
+          { text: t('footer.contact.information'), href: getLocalizedPermalink(locale, '/contact') },
         ],
       },
     ],

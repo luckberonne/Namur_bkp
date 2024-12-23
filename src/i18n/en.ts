@@ -7,9 +7,9 @@ export const en = {
   },
   footer: {
     product: {
-      title: "Products",
-      alimenticios: "Food Products",
-      agroquimicos: "Agrochemicals"
+      title: "Namur",
+      about: "About us",
+      products: "Natural Products",
     },
     contact: {
       title: "Contact Us",

@@ -8,13 +8,12 @@ export const es = {
   footer: {
     product: {
       title: "Productos",
-      alimenticios: "Productos Alimenticios",
-      agroquimicos: "Agroquímicos"
+      about: "Sobre Nosotros",
+      products: "Productos Naturales",
     },
     contact: {
       title: "Contáctanos",
       information: "Información de Contacto",
-      rrhh: "Recursos Humanos"
     },
     creators: {
       lucas: "Lucas Beronne",
