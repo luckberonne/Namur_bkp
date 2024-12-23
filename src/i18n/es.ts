@@ -32,6 +32,40 @@ export const es = {
       },
       presubtitle: 'En ',
       subtitle: ', creemos en el poder de lo natural. Desde 2018, nos especializamos en ofrecer productos alimenticios de la más alta calidad para el mercado mayorista, tanto en Paraguay como para exportación. Nuestros productos, cuidadosamente seleccionados y procesados, garantizan frescura y sanidad en cada entrega. Nuestro compromiso es ser el puente entre productores y empresas, facilitando el acceso a ingredientes esenciales que alimentan no solo el cuerpo, sino también la felicidad y el bienestar.',
+    },
+    howWeWork: {
+      title: 'Conoce nuestra forma de trabajar',
+      subtitle: 'Porque lo primero es la seguridad alimentaria.',
+      bpa: 'Certificación BPA',
+      bpadescription: 'Las BPA son un conjunto de prácticas que buscan optimizar la producción agrícola, minimizando el impacto ambiental y asegurando la inocuidad de los alimentos.',
+      fairtrade: 'Certificación Fairtrade',
+      fairtradedescription: 'Fairtrade garantiza que los productores reciben un precio justo por sus productos y trabajan en condiciones laborales adecuadas.',
+      gap: 'Certifiación GlobalGAP',
+      gapdescription: 'GlobalGAP es un estándar internacional que asegura que los productos agrícolas se producen de manera segura y responsable, cumpliendo con requisitos ambientales y sociales.',
+      advantages: {
+        a:'',
+        b:'',
+        c:'',
+        d:'',
+      }
+    },
+    questions:{
+      title: 'Preguntas Frecuentes',
+      subtitle: 'Explora las siguientes preguntas para conocer más sobre nuestros productos, procesos y políticas de envío. En Namur, queremos facilitarte toda la información necesaria para hacer negocios con confianza y garantizarte una experiencia sin inconvenientes.',
+      ask: {
+        first: 'boca bcoa',
+        answerFirst: 'bocabcoa',
+        second: '¿Se puede solicitar un envase en especifico?',
+        answerSecond: 'Sí, al realizar el pedido, puedes consultar los formatos disponibles para cada producto. Además, tienes la opción de proponer el formato que necesites, y si es viable, estableceremos un precio personalizado.',
+        third: '¿Cuál es el pedido mínimo?',
+        answerThird: 'El pedido mínimo es de 100Kg. Puede ser de un producto o la suma total de varios de ellos. En el aparto de productos podrá encontrar el formato en el que viene cada uno de ellos. ',
+        fourth: '¿Cómo se calcula el costo del flete?',
+        answerFourth: 'El costo de flete depende del volumen del pedido y del destino. Ofrecemos cotizaciones personalizadas.',
+        fifth: '¿El envío está incluido en el precio?',
+        answerFifth: 'El costo del envío se acuerda de acuerdo a las necesidades y volumen del cliente.',
+        sixth: '¿Cualés son los métodos de pago?',
+        answerSixth: 'Principalmente aceptamos transferencias bancarias o efectivo. Sin embargo, para clientes frecuentes, ofrecemos opciones adicionales como cheques u otros métodos de pago.',
+      }
     }
   },
   aboutUs: {
@@ -76,36 +110,38 @@ export const es = {
 
       oregano: {
         title: 'Oregano',
-        description: 'boca',
+        description: 'Datos por cargar',
       },
       lino: {
         title: 'Lino',
-        description: 'boca',
+        description: 'Datos por cargar',
       },
       pasaDeUva: {
         title: 'Pasa de uva',
-        description: 'boca',
-      },
-      chia: {
-        title: 'Chía',
-        description: 'boca',
-      },
-      sesamo: {
-        title: 'Sesamo',
-        description: 'boca',
+        description: 'Datos por cargar',
       },
       coriandro: {
         title: 'Coriandro',
-        description: 'boca',
-      },
-      albahaca: {
-        title: 'Albahaca',
-        description: 'boca',
+        description: 'Datos por cargar',
       },
       romero: {
         title: 'Romero',
-        description: 'boca',
+        description: 'Datos por cargar',
       },
+      ajoEnPolvo: {
+        title: 'Ajo en Polvo',
+        description: 'Datos por cargar',
+      },
+      sesamo: {
+        title: 'Sesamo',
+        description: 'Datos por cargar',
+      },
+      
+      albahaca: {
+        title: 'Albahaca',
+        description: 'Datos por cargar',
+      },
+      
       proximamente: {
         title: 'Proximamente',
         description: '¡En Namur seguimos creciendo y expandiendo nuestra oferta! Muy pronto incorporaremos nuevos productos naturales cuidadosamente seleccionados para ofrecerte más variedad y calidad.',

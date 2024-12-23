@@ -1,10 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import agro from '~/assets/videos/agro.webm';
+import agro from '~/assets/videos/agro.mp4';
 import varias from '~/assets/images/general/varias.jpg';
 import varias1 from '~/assets/images/general/varias1.jpg';
-
-
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -38,22 +36,19 @@ const metadata = {
 
   <Content
     isReversed
-    title="Conoce nuestra forma de trabajar."
+    title={t('index.howWeWork.title')}
     items={[
       {
-        title: 'Certificación BPA',
-        description:
-          'Las BPA son un conjunto de prácticas que buscan optimizar la producción agrícola, minimizando el impacto ambiental y asegurando la inocuidad de los alimentos.',
+        title: t('index.howWeWork.bpa'),
+        description:t('index.howWeWork.bpadescription'),
       },
       {
-        title: 'Certificación Fairtrade',
-        description:
-          'Fairtrade garantiza que los productores reciben un precio justo por sus productos y trabajan en condiciones laborales adecuadas.',
+        title: t('index.howWeWork.fairtrade'),
+        description:t('index.howWeWork.fairtradedescription'),
       },
       {
-        title: 'Certifiación GlobalGAP',
-        description:
-          'GlobalGAP es un estándar internacional que asegura que los productos agrícolas se producen de manera segura y responsable, cumpliendo con requisitos ambientales y sociales.',
+        title: t('index.howWeWork.gap'),
+        description:t('index.howWeWork.gapdescription'),
       },
     ]}
     image={{
@@ -63,7 +58,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Construyendo sobre bases modernas
+        {t('index.howWeWork.subtitle')}
       </h3>
     </Fragment>
 
@@ -112,40 +107,34 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Preguntas Frecuentes"
-    subtitle="Explora las siguientes preguntas para obtener información sobre las potentes características que Namur ofrece y cómo puede optimizar tus operaciones agrícolas."
-    tagline="FAQs"
+    title={t('index.questions.title')}
+    subtitle={t('index.questions.subtitle')}
+
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: '¿Por qué elegir Namur?',
-        description:
-          'Namur ofrece soluciones integrales para tus necesidades agropecuarias, desde semillas y fertilizantes hasta productos bioquímicos. Nos destacamos por nuestra calidad, sostenibilidad y servicio al cliente, ayudando a mejorar la productividad y eficiencia en el campo.',
+        title: t('index.questions.ask.first'),
+        description: t('index.questions.ask.answerFirst'),
       },
       {
-        title: '¿Qué necesito para comenzar?',
-        description:
-          'Para empezar con Namur, solo necesitas acceso a internet para explorar nuestro catálogo en línea. Elige los productos que mejor se adapten a tus necesidades agrícolas y configúralos según tus requerimientos específicos.',
+        title: t('index.questions.ask.second'),
+        description: t('index.questions.ask.answerSecond'),
       },
       {
-        title: '¿Cómo se realiza un pedido con Namur?',
-        description:
-          'Es fácil. Simplemente selecciona los productos que deseas, personaliza tu pedido según tus necesidades, y completa la compra a través de nuestro sitio web. Te proporcionaremos actualizaciones y detalles de envío para asegurar una entrega puntual.',
+        title: t('index.questions.ask.third'),
+        description: t('index.questions.ask.answerThird'),  
       },
       {
-        title: '¿Qué hacer si tengo problemas con un producto?',
-        description:
-          'Si encuentras algún problema con un producto, por favor, contáctanos a través de nuestro servicio de atención al cliente. Estamos aquí para ayudarte a resolver cualquier inconveniente y asegurar que estés satisfecho con tu compra.',
+        title: t('index.questions.ask.fourth'),
+        description: t('index.questions.ask.answerFourth'),  
       },
       {
-        title: '¿Namur ofrece asesoría técnica?',
-        description:
-          'Sí, ofrecemos asesoría técnica para ayudarte a elegir los productos adecuados y aplicarlos de manera efectiva en tus cultivos. Nuestro equipo de expertos está disponible para brindarte soporte y recomendaciones personalizadas.',
+        title: t('index.questions.ask.fifth'),
+        description: t('index.questions.ask.answerFifth'),  
       },
       {
-        title: '¿Qué formas de pago acepta Namur?',
-        description:
-          'Aceptamos varias formas de pago para tu conveniencia, incluyendo tarjetas de crédito, débito y transferencias bancarias. Elige el método que mejor se adapte a tus necesidades al momento de realizar tu compra.',
+        title: t('index.questions.ask.sixth'),
+        description: t('index.questions.ask.answerSixth'),  
       },
     ]}
   />

@@ -32,6 +32,40 @@ export const en = {
       },
       presubtitle: 'At ',
       subtitle: ', we believe in the power of nature. Since 2018, we have specialized in offering food products of the highest quality for the wholesale market, both in Paraguay and for export. Our products, carefully selected and processed, guarantee freshness and health in each delivery. Our commitment is to be the bridge between producers and companies, facilitating access to essential ingredients that feed not only the body, but also happiness and well-being.',
+    },
+    howWeWork: {
+      title: 'Learn about our way of working',
+      subtitle: 'Because the first thing is food security.',
+      bpa: 'BPA Certification',
+      bpadescription: 'GAP are a set of practices that seek to optimize agricultural production, minimizing environmental impact and ensuring food safety.',
+      fairtrade: 'Fairtrade Certification',
+      fairtradedescription: 'Fairtrade guarantees that producers receive a fair price for their products and work under appropriate working conditions.',
+      gap: 'GlobalGAP Certification',
+      gapdescription: 'GlobalGAP is an international standard that ensures that agricultural products are produced safely and responsibly, meeting environmental and social requirements.',
+      advantages: {
+        a:'',
+        b:'',
+        c:'',
+        d:'',
+      }
+    },
+    questions: {
+      title: 'Frequently Asked Questions',
+      subtitle: 'Explore the following questions to learn more about our products, processes and shipping policies. At Namur, we want to provide you with all the information you need to do business with confidence and guarantee a hassle-free experience.',
+      ask: {
+        first: 'bcoabcoa',
+        answerFirst: 'bcoabcoa',
+        second: 'Can I request a specific container?',
+        answerSecond: 'Yes, when placing the order, you can check the formats available for each product. In addition, you have the option to propose the format you need, and if it is viable, we will establish a personalized price.',
+        third: 'What is the minimum order?',
+        answerThird: 'The minimum order is 100Kg. It can be a product or the sum total of several of them. In the products section you can find the format in which each of them comes.',
+        fourth: 'How is the freight cost calculated?',
+        answerFourth: 'The freight cost depends on the order volume and destination. We offer personalized quotes.',
+        fifth: 'Is shipping included in the price?',
+        answerFifth: 'The cost of shipping is agreed upon according to the customers needs and volume.',
+        sixth: 'What are the payment methods?',
+        answerSixth: 'We mainly accept bank transfers or cash. However, for repeat customers, we offer additional options such as checks or other payment methods.',
+      }
     }
   },
   aboutUs: {
@@ -77,35 +111,35 @@ export const en = {
 
       oregano: {
         title: 'Oregano',
-        description: 'boca',
+        description: 'Data to load',
       },
       lino: {
         title: 'Lino',
-        description: 'boca',
+        description: 'Data to load',
       },
       pasaDeUva: {
         title: 'Pasa de uva',
-        description: 'boca',
-      },
-      chia: {
-        title: 'Chía',
-        description: 'boca',
-      },
-      sesamo: {
-        title: 'Sesamo',
-        description: 'boca',
+        description: 'Data to load',
       },
       coriandro: {
         title: 'Coriandro',
-        description: 'boca',
-      },
-      albahaca: {
-        title: 'Albahaca',
-        description: 'boca',
+        description: 'Data to load',
       },
       romero: {
         title: 'Romero',
-        description: 'boca',
+        description: 'Data to load',
+      },
+      ajoEnPolvo: {
+        title: 'Ajo en Polvo',
+        description: 'Data to load',
+      },
+      sesamo: {
+        title: 'Sesamo',
+        description: 'Data to load',
+      },
+      albahaca: {
+        title: 'Albahaca',
+        description: 'Data to load',
       },
       proximamente: {
         title: 'Coming soon',
