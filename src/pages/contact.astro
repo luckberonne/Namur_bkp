@@ -9,7 +9,7 @@ import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
 const { t } = useTranslations(getLocaleFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Contact',
+  title: t('contact.metadata.title')
 };
 ---
 

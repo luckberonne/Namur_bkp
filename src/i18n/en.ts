@@ -69,6 +69,9 @@ export const en = {
     }
   },
   aboutUs: {
+    metadata: {
+      title: 'About us',
+    },
     title: 'We love nature, we put the soul of Paraguay in each product.',
     subtitle: 'Founded in 2018, Namur was born with the aim of connecting people with food products that contribute to their well-being and health. From the beginning, we have focused on offering high-quality natural ingredients, supporting local producers and promoting the agricultural wealth of Paraguay. "The natural thing that feeds your happiness." or as we say "Pe heko ypyva omongaruva nde vy\' apavē" is more than a slogan, it is our philosophy.',
     mision: {
@@ -103,6 +106,9 @@ export const en = {
     }
   },
   products: {
+    metadata: {
+      title: 'Products',
+    },
     title: 'The natural thing that feeds your happiness!',
     subtitle: 'At Namur, we carefully select the best natural products to satisfy the needs of our customers. We specialize in offering high-quality ingredients, with reliable origin and processes that guarantee unmatched freshness, health and flavor. Each product we offer reflects our commitment to nature and the quality that our customers deserve. We work together with local producers to ensure that each delivery meets the most demanding standards and provides well-being to consumers. Discover our range of products and get ready for the new additions that will soon be added to our offer. Nature always has more to offer!',
       grillaProd: {
@@ -148,6 +154,9 @@ export const en = {
     }
   },
   contact: {
+    metadata: {
+      title: 'Contact',
+    },
     title: 'Connect with us!',
     subtitle: 'Send us a message today!',
     description: 'For quicker answers, explore our Frequently Asked Questions section. You could find the solution you are looking for right there! If not, talk to us on Whatsapp or send us a message through our form. Our team will be happy to help you.',

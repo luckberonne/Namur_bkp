@@ -22,7 +22,7 @@ export const es = {
   },
   index: {
     metadata: {
-      title: 'Namur — Soluciones Agrícolas',
+      title: 'Soluciones Agrícolas',
     },
     hero: {
       imageAlt: 'Imagen de NamurHero',
@@ -68,6 +68,9 @@ export const es = {
     }
   },
   aboutUs: {
+    metadata: {
+      title: 'Sobre Nosotros',
+    },
     title: 'Somos amor por la naturaleza, ponemos el alma de Paraguay en cada producto.',
     subtitle: 'Fundada en 2018, Namur nació con el objetivo de conectar a las personas con productos alimenticios que aportan a su bienestar y salud. Desde el principio, nos hemos enfocado en ofrecer ingredientes naturales de alta calidad, apoyando a productores locales y promoviendo la riqueza agrícola de Paraguay. "Lo natural que alimenta tu felicidad." o como nosotros decimos "Pe heko ypyva omongaruva nde vy\' apavē" es más que un eslogan, es nuestra filosofía.',
     mision: {
@@ -101,6 +104,9 @@ export const es = {
     }
   },
   products: {
+    metadata: {
+      title: 'Productos',
+    },
     title: '¡Lo natural que alimenta tu felicidad!',
     subtitle: 'En Namur, seleccionamos con esmero los mejores productos naturales para satisfacer las necesidades de nuestros clientes. Nos especializamos en ofrecer ingredientes de alta calidad, con un origen confiable y procesos que garantizan frescura, sanidad y sabor inigualable. Cada producto que ofrecemos refleja nuestro compromiso con la naturaleza y con la calidad que nuestros clientes merecen. Trabajamos junto a productores locales para asegurar que cada entrega cumpla con los estándares más exigentes y aporte bienestar a quienes los consumen. Descubre nuestra gama de productos y prepárate para las nuevas incorporaciones que pronto se sumarán a nuestra oferta. ¡La naturaleza siempre tiene más para ofrecer!',
     grillaProd: {
@@ -148,6 +154,9 @@ export const es = {
     }
   },
   contact: {
+    metadata: {
+      title: 'Contacto',
+    },
     title: '¡Conéctate con nosotros!',
     subtitle: '¡Envíanos un mensaje hoy mismo!',
     description: 'Para respuestas más rápidas, explora nuestra sección de Preguntas Frecuentes. ¡Podrías encontrar la solución que buscas allí mismo! Si no, háblanos al Whatsapp o envianos un mensaje a traves de nuestro formulario. Nuestro equipo estará encantado de ayudarte.',
