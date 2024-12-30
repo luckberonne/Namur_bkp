@@ -4,7 +4,7 @@ import { type Form } from '~/types';
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props as Form;
 ---
 
-<form>
+<form id="contactForm">
   {
     inputs &&
       inputs.map(
@@ -84,3 +84,22 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
     )
   }
 </form>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement; 
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const data: Record<string, string> = {}; 
+    formData.forEach((value, key) => {
+      data[key] = value as string;
+    }); 
+
+    const whatsappNumber = "+595984107621";
+    const whatsappMessage = `Hola, Mi Nombre es ${data['name']}, Mensaje: ${data['message']}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, "_blank");
+  });
+</script>
