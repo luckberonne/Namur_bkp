@@ -65,7 +65,12 @@ export const en = {
         answerFifth: 'The cost of shipping is agreed upon according to the customers needs and volume.',
         sixth: 'What are the payment methods?',
         answerSixth: 'We mainly accept bank transfers or cash. However, for repeat customers, we offer additional options such as checks or other payment methods.',
-      }
+      }  
+    },
+    statsIndex: {
+      a:'Companies that trust us',
+      b:'Countries to which we export',
+      c:'Products marketed annually'
     }
   },
   aboutUs: {

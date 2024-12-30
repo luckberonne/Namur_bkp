@@ -65,6 +65,11 @@ export const es = {
         sixth: '¿Cualés son los métodos de pago?',
         answerSixth: 'Principalmente aceptamos transferencias bancarias o efectivo. Sin embargo, para clientes frecuentes, ofrecemos opciones adicionales como cheques u otros métodos de pago.',
       }
+    },
+    statsIndex: {
+      a:'Empresas que confían en nosotros',
+      b:'Países a los que exportamos',
+      c:'Productos comercializados anualmente'
     }
   },
   aboutUs: {
