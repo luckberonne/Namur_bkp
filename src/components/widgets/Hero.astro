@@ -36,9 +36,6 @@ const {
     )}
   </div>
 
-  <!-- Overlay oscuro y desenfoque más suave detrás del texto -->
-  <div class="absolute inset-0 bg-black opacity-40 z-10"></div> <!-- Overlay oscuro -->
-
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 z-20">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
     <div class="py-12 md:py-20">
@@ -58,15 +55,12 @@ const {
             />
           )}
           <div class="max-w-3xl mx-auto color">
-            {subtitle && <p class="text-xl text-muted mb-6 text-slate-300" set:html={subtitle} />}
+            {subtitle && <p class="text-xl text-muted mb-6 text-green-300" set:html={subtitle} />}
           </div>
           {content && <Fragment set:html={content} />}
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Fondo desenfocado solo detrás del texto -->
-  <div class="absolute inset-0 filter blur-sm z-0"></div> <!-- Fondo desenfocado -->
 </section>
 

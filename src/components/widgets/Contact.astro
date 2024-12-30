@@ -17,11 +17,10 @@ const {
   id,
   isDark = false,
   classes = {},
-  bg = await Astro.slots.render('bg'),
 } = Astro.props as Contact;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`}>
   <!-- Headline Arriba -->
   <div class="mb-8">
     <Headline title={title} subtitle={subtitle} tagline={tagline} />

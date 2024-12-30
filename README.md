@@ -1,13 +1,7 @@
-# 🚀 NamurI18n
+# Página Web de Namur - Productos de Especias
 
-This branch `i18n` contains an experiment to apply internationalization (i18n) to **Namur**. It requires a lot of engineering work and there is still a long way to go to mix with the main branch. Subtle and intelligent changes are required to go from a site without the need for internationalization to one with internationalization. Also, it uses [astro-i18n-aut](https://github.com/jlarmstrongiv/astro-i18n-aut) integration which has a lot of potential but is still in early versions.
+Bienvenido al repositorio oficial de la página web de **Namur**, una empresa dedicada a la venta de especias de alta calidad. Este proyecto está construido utilizando **Astro**, un generador de sitios estáticos que ofrece un rendimiento optimizado y una experiencia de desarrollo eficiente.
 
-Although attempts are made to update frequently, this branch `i18n` may not have the latest version of the **Namur** code. Use this branch for now as a guide to establishing internationalization with **Namur**. It is not the only possible way.
+## Descripción
 
-By default, the robot configurations have been updated so that the Demo cannot be indexed in search engines. You can update these settings in `public/robots.txt` and in `src/config.yml` at various levels.
-
-This branch has been possible thanks to the great work of [@reuseman](https://github.com/reuseman).
-
-## Demo
-
-📌 [https://namur-i18n.vercel.app/](https://namur-i18n.vercel.app/)
+Namur ofrece una amplia gama de especias premium. En nuestra página web podrás conocer más sobre nuestros productos, aprender sobre sus beneficios, y realizar compras de manera fácil y rápida.
