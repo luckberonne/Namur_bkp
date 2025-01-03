@@ -99,13 +99,13 @@ export const es = {
     },
     achievements: {
       title: 'Nuestros Logros',
-      subtitle: '',
-      item1 : '',
-      subtitleI1: '',
-      item2: '',
-      subtitleI2: '',
-      item3: '',
-      subtitleI3: '',
+      subtitle: 'En Namur, seguimos creciendo y mejorando para ofrecer siempre lo mejor. Optimizamos nuestra capacidad de almacenamiento, reducimos tiempos de entrega y garantizamos un stock constante. Expandimos nuestra red de proveedores y productos, proyectando duplicarlos para finales de 2025. Además, desembarcamos en la web para estar a la vanguardia tecnológica y más cerca de nuestros clientes.',
+      item1 : 'Optimización Logística y Abastecimiento Confiable',
+      subtitleI1: 'Hemos ampliado nuestra capacidad de almacenamiento, lo que nos permite reducir significativamente los tiempos de espera en la entrega de productos. Esto garantiza un stock más estable y constante para satisfacer las necesidades de nuestros clientes de manera eficiente.',
+      item2: 'Eficiencia Operativa y Mejores Prácticas',
+      subtitleI2: 'Hemos optimizado nuestras operaciones diarias implementando buenas prácticas de almacenamiento, lo que nos permite trabajar de manera más eficiente y mantener la calidad de nuestros productos en cada etapa del proceso.',
+      item3: 'Expansión y Crecimiento Sostenido',
+      subtitleI3: 'Hemos ampliado nuestra red de proveedores y diversificado nuestra oferta de productos, fortaleciendo así nuestra capacidad para satisfacer la demanda del mercado. Además, proyectamos duplicar tanto la cantidad de productos como de proveedores para finales de 2025, consolidando nuestro crecimiento y alcance.',
     }
   },
   products: {
@@ -120,15 +120,15 @@ export const es = {
 
       oregano: {
         title: 'Oregano',
-        description: 'Datos por cargar',
+        description: 'Oreganum Vulgare\nOrigen: Argentina\nEnvase: 15Kg',
       },
       lino: {
         title: 'Lino',
-        description: 'Datos por cargar',
+        description: 'Linum Usitatissimum\nOrigen: Argentina\nEnvase: 25Kg',
       },
       pasaDeUva: {
         title: 'Pasa de uva',
-        description: 'Datos por cargar',
+        description: 'Sultanina\nOrigen: Argentina\nEnvases: 10 o 13Kg',
       },
       coriandro: {
         title: 'Coriandro',
@@ -136,20 +136,20 @@ export const es = {
       },
       romero: {
         title: 'Romero',
-        description: 'Datos por cargar',
+        description: 'Rosmarinus oficinal L\nOrigen: Argentina\nEnvase: 15Kg',
       },
       ajoEnPolvo: {
         title: 'Ajo en Polvo',
-        description: 'Datos por cargar',
+        description: 'Allium sativum L\nOrigen: Argentina\nEnvase: 5Kg',
       },
       sesamo: {
         title: 'Sesamo',
-        description: 'Datos por cargar',
+        description: 'Sesamum indicum \n Proximamente',
       },
       
       albahaca: {
         title: 'Albahaca',
-        description: 'Datos por cargar',
+        description: 'Ocymiun basilicum L \n Ocymiun minimum L\nProximamente',
       },
       
       proximamente: {
