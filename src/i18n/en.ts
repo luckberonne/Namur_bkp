@@ -43,10 +43,14 @@ export const en = {
       gap: 'GlobalGAP Certification',
       gapdescription: 'GlobalGAP is an international standard that ensures that agricultural products are produced safely and responsibly, meeting environmental and social requirements.',
       advantages: {
-        a:'',
-        b:'',
-        c:'',
-        d:'',
+        first:'Premium Quality Guaranteed',
+        descriptionFirst:'We select and process each product with the utmost care to offer freshness, flavor and purity, complying with the highest quality standards.',
+        second:'Fast and Reliable Delivery',
+        descriptionSecond:'We have an efficient logistics system that ensures timely deliveries, maintaining the constant flow of your operations without interruptions.',
+        third:'Commitment to your Satisfaction',
+        descriptionThird:'We back up our products with a solid guarantee, ensuring quality and compliance in each purchase to give you peace of mind and confidence.',
+        fourth:'Adaptability to your Needs',
+        descriptionFourth:'We adapt to the demands of your business, offering customized formats and expanding our catalog to accompany your growth.',
       }
     },
     questions: {
@@ -134,7 +138,7 @@ export const en = {
       },
       coriandro: {
         title: 'Coriandro',
-        description: 'Data to load',
+        description: 'Coriandrum Sativium\nOrigin: Argentina\nPackaging: 25Kg',
       },
       romero: {
         title: 'Romero',

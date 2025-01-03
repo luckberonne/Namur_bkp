@@ -27,7 +27,7 @@ export const es = {
     hero: {
       imageAlt: 'Imagen de NamurHero',
       title: {  
-        part1: 'Desde el corazón de Paraguay, te llevamos lo mejor de la naturaleza!',
+        part1: 'Desde el corazón de Sudamérica, te llevamos lo mejor de la naturaleza!',
       },
       presubtitle: 'En ',
       subtitle: ', creemos en el poder de lo natural. Desde 2018, nos especializamos en ofrecer productos alimenticios de la más alta calidad para el mercado mayorista, tanto en Paraguay como para exportación. Nuestros productos, cuidadosamente seleccionados y procesados, garantizan frescura y sanidad en cada entrega. Nuestro compromiso es ser el puente entre productores y empresas, facilitando el acceso a ingredientes esenciales que alimentan no solo el cuerpo, sino también la felicidad y el bienestar.',
@@ -42,10 +42,14 @@ export const es = {
       gap: 'Certifiación GlobalGAP',
       gapdescription: 'GlobalGAP es un estándar internacional que asegura que los productos agrícolas se producen de manera segura y responsable, cumpliendo con requisitos ambientales y sociales.',
       advantages: {
-        a:'',
-        b:'',
-        c:'',
-        d:'',
+        first:'Calidad Premium Garantizada',
+        descriptionFirst:'Seleccionamos y procesamos cada producto con el máximo cuidado para ofrecer frescura, sabor y pureza, cumpliendo con los más altos estándares de calidad.',
+        second:'Entrega Rápida y Confiable',
+        descriptionSecond:'Contamos con un sistema logístico eficiente que asegura entregas puntuales, manteniendo el flujo constante de tus operaciones sin interrupciones.',
+        third:'Compromiso con tu Satisfacción',
+        descriptionThird:'Respaldamos nuestros productos con una garantía sólida, asegurando calidad y cumplimiento en cada compra para brindarte tranquilidad y confianza.',
+        fourth:'Adaptabilidad a tus Necesidades',
+        descriptionFourth:'Nos ajustamos a las demandas de tu negocio, ofreciendo formatos personalizados y ampliando nuestro catálogo para acompañar tu crecimiento.',
       }
     },
     questions:{
@@ -76,7 +80,7 @@ export const es = {
     metadata: {
       title: 'Sobre Nosotros',
     },
-    title: 'Somos amor por la naturaleza, ponemos el alma de Paraguay en cada producto.',
+    title: 'Somos amor por la naturaleza, ponemos el alma de Sudamérica en cada producto.',
     subtitle: 'Fundada en 2018, Namur nació con el objetivo de conectar a las personas con productos alimenticios que aportan a su bienestar y salud. Desde el principio, nos hemos enfocado en ofrecer ingredientes naturales de alta calidad, apoyando a productores locales y promoviendo la riqueza agrícola de Paraguay. "Lo natural que alimenta tu felicidad." o como nosotros decimos "Pe heko ypyva omongaruva nde vy\' apavē" es más que un eslogan, es nuestra filosofía.',
     mision: {
       title: 'Nuestra misión',
@@ -132,7 +136,7 @@ export const es = {
       },
       coriandro: {
         title: 'Coriandro',
-        description: 'Datos por cargar',
+        description: 'Coriandrum Sativium\nOrigen: Argentina\nEnvase: 25Kg',
       },
       romero: {
         title: 'Romero',
