@@ -53,8 +53,8 @@ export const en = {
       title: 'Frequently Asked Questions',
       subtitle: 'Explore the following questions to learn more about our products, processes and shipping policies. At Namur, we want to provide you with all the information you need to do business with confidence and guarantee a hassle-free experience.',
       ask: {
-        first: 'bcoabcoa',
-        answerFirst: 'bcoabcoa',
+        first: 'Does Namur ship internationally?',
+        answerFirst: 'Yes, at Namur we export to several countries in South America, North America and Europe. For more information on specific destinations and shipping options, please feel free to contact us.',
         second: 'Can I request a specific container?',
         answerSecond: 'Yes, when placing the order, you can check the formats available for each product. In addition, you have the option to propose the format you need, and if it is viable, we will establish a personalized price.',
         third: 'What is the minimum order?',

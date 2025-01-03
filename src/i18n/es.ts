@@ -52,8 +52,8 @@ export const es = {
       title: 'Preguntas Frecuentes',
       subtitle: 'Explora las siguientes preguntas para conocer más sobre nuestros productos, procesos y políticas de envío. En Namur, queremos facilitarte toda la información necesaria para hacer negocios con confianza y garantizarte una experiencia sin inconvenientes.',
       ask: {
-        first: 'boca bcoa',
-        answerFirst: 'bocabcoa',
+        first: '¿Namur realiza envíos internacionales?',
+        answerFirst: 'Sí, en Namur exportamos a varios países de Sudamérica, Norteamérica y Europa. Para más información sobre destinos específicos y opciones de envío, no dude en contactarnos.',
         second: '¿Se puede solicitar un envase en especifico?',
         answerSecond: 'Sí, al realizar el pedido, puedes consultar los formatos disponibles para cada producto. Además, tienes la opción de proponer el formato que necesites, y si es viable, estableceremos un precio personalizado.',
         third: '¿Cuál es el pedido mínimo?',
