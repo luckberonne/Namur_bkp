@@ -23,7 +23,7 @@ export const en = {
   },
   index: {
     metadata: {
-      title: 'Namur — Agricultural Solutions',
+      title: 'Agricultural Solutions',
     },
     hero: {
       imageAlt: 'NamurHero image',
