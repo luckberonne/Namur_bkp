@@ -27,7 +27,7 @@ export const es = {
     hero: {
       imageAlt: 'Imagen de NamurHero',
       title: {  
-        part1: 'Desde el corazón de Paraguay, te llevamos lo mejor de la naturaleza!',
+        part1: 'Desde el corazón de Sudamérica, te llevamos lo mejor de la naturaleza!',
       },
       presubtitle: 'En ',
       subtitle: ', creemos en el poder de lo natural. Desde 2018, nos especializamos en ofrecer productos alimenticios de la más alta calidad para el mercado mayorista, tanto en Paraguay como para exportación. Nuestros productos, cuidadosamente seleccionados y procesados, garantizan frescura y sanidad en cada entrega. Nuestro compromiso es ser el puente entre productores y empresas, facilitando el acceso a ingredientes esenciales que alimentan no solo el cuerpo, sino también la felicidad y el bienestar.',
@@ -42,18 +42,22 @@ export const es = {
       gap: 'Certifiación GlobalGAP',
       gapdescription: 'GlobalGAP es un estándar internacional que asegura que los productos agrícolas se producen de manera segura y responsable, cumpliendo con requisitos ambientales y sociales.',
       advantages: {
-        a:'',
-        b:'',
-        c:'',
-        d:'',
+        first:'Calidad Premium Garantizada',
+        descriptionFirst:'Seleccionamos y procesamos cada producto con el máximo cuidado para ofrecer frescura, sabor y pureza, cumpliendo con los más altos estándares de calidad.',
+        second:'Entrega Rápida y Confiable',
+        descriptionSecond:'Contamos con un sistema logístico eficiente que asegura entregas puntuales, manteniendo el flujo constante de tus operaciones sin interrupciones.',
+        third:'Compromiso con tu Satisfacción',
+        descriptionThird:'Respaldamos nuestros productos con una garantía sólida, asegurando calidad y cumplimiento en cada compra para brindarte tranquilidad y confianza.',
+        fourth:'Adaptabilidad a tus Necesidades',
+        descriptionFourth:'Nos ajustamos a las demandas de tu negocio, ofreciendo formatos personalizados y ampliando nuestro catálogo para acompañar tu crecimiento.',
       }
     },
     questions:{
       title: 'Preguntas Frecuentes',
       subtitle: 'Explora las siguientes preguntas para conocer más sobre nuestros productos, procesos y políticas de envío. En Namur, queremos facilitarte toda la información necesaria para hacer negocios con confianza y garantizarte una experiencia sin inconvenientes.',
       ask: {
-        first: 'boca bcoa',
-        answerFirst: 'bocabcoa',
+        first: '¿Namur realiza envíos internacionales?',
+        answerFirst: 'Sí, en Namur exportamos a varios países de Sudamérica, Norteamérica y Europa. Para más información sobre destinos específicos y opciones de envío, no dude en contactarnos.',
         second: '¿Se puede solicitar un envase en especifico?',
         answerSecond: 'Sí, al realizar el pedido, puedes consultar los formatos disponibles para cada producto. Además, tienes la opción de proponer el formato que necesites, y si es viable, estableceremos un precio personalizado.',
         third: '¿Cuál es el pedido mínimo?',
@@ -76,7 +80,7 @@ export const es = {
     metadata: {
       title: 'Sobre Nosotros',
     },
-    title: 'Somos amor por la naturaleza, ponemos el alma de Paraguay en cada producto.',
+    title: 'Somos amor por la naturaleza, ponemos el alma de Sudamérica en cada producto.',
     subtitle: 'Fundada en 2018, Namur nació con el objetivo de conectar a las personas con productos alimenticios que aportan a su bienestar y salud. Desde el principio, nos hemos enfocado en ofrecer ingredientes naturales de alta calidad, apoyando a productores locales y promoviendo la riqueza agrícola de Paraguay. "Lo natural que alimenta tu felicidad." o como nosotros decimos "Pe heko ypyva omongaruva nde vy\' apavē" es más que un eslogan, es nuestra filosofía.',
     mision: {
       title: 'Nuestra misión',
@@ -99,13 +103,13 @@ export const es = {
     },
     achievements: {
       title: 'Nuestros Logros',
-      subtitle: '',
-      item1 : '',
-      subtitleI1: '',
-      item2: '',
-      subtitleI2: '',
-      item3: '',
-      subtitleI3: '',
+      subtitle: 'En Namur, seguimos creciendo y mejorando para ofrecer siempre lo mejor. Optimizamos nuestra capacidad de almacenamiento, reducimos tiempos de entrega y garantizamos un stock constante. Expandimos nuestra red de proveedores y productos, proyectando duplicarlos para finales de 2025. Además, desembarcamos en la web para estar a la vanguardia tecnológica y más cerca de nuestros clientes.',
+      item1 : 'Optimización Logística y Abastecimiento Confiable',
+      subtitleI1: 'Hemos ampliado nuestra capacidad de almacenamiento, lo que nos permite reducir significativamente los tiempos de espera en la entrega de productos. Esto garantiza un stock más estable y constante para satisfacer las necesidades de nuestros clientes de manera eficiente.',
+      item2: 'Eficiencia Operativa y Mejores Prácticas',
+      subtitleI2: 'Hemos optimizado nuestras operaciones diarias implementando buenas prácticas de almacenamiento, lo que nos permite trabajar de manera más eficiente y mantener la calidad de nuestros productos en cada etapa del proceso.',
+      item3: 'Expansión y Crecimiento Sostenido',
+      subtitleI3: 'Hemos ampliado nuestra red de proveedores y diversificado nuestra oferta de productos, fortaleciendo así nuestra capacidad para satisfacer la demanda del mercado. Además, proyectamos duplicar tanto la cantidad de productos como de proveedores para finales de 2025, consolidando nuestro crecimiento y alcance.',
     }
   },
   products: {
@@ -120,36 +124,36 @@ export const es = {
 
       oregano: {
         title: 'Oregano',
-        description: 'Datos por cargar',
+        description: 'Oreganum Vulgare\nOrigen: Argentina\nEnvase: 15Kg',
       },
       lino: {
         title: 'Lino',
-        description: 'Datos por cargar',
+        description: 'Linum Usitatissimum\nOrigen: Argentina\nEnvase: 25Kg',
       },
       pasaDeUva: {
         title: 'Pasa de uva',
-        description: 'Datos por cargar',
+        description: 'Sultanina\nOrigen: Argentina\nEnvases: 10 o 13Kg',
       },
       coriandro: {
         title: 'Coriandro',
-        description: 'Datos por cargar',
+        description: 'Coriandrum Sativium\nOrigen: Argentina\nEnvase: 25Kg',
       },
       romero: {
         title: 'Romero',
-        description: 'Datos por cargar',
+        description: 'Rosmarinus oficinal L\nOrigen: Argentina\nEnvase: 15Kg',
       },
       ajoEnPolvo: {
         title: 'Ajo en Polvo',
-        description: 'Datos por cargar',
+        description: 'Allium sativum L\nOrigen: Argentina\nEnvase: 5Kg',
       },
       sesamo: {
         title: 'Sesamo',
-        description: 'Datos por cargar',
+        description: 'Sesamum indicum \n Proximamente',
       },
       
       albahaca: {
         title: 'Albahaca',
-        description: 'Datos por cargar',
+        description: 'Ocymiun basilicum L \n Ocymiun minimum L\nProximamente',
       },
       
       proximamente: {

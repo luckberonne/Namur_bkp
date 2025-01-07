@@ -50,12 +50,12 @@ const {
           )}
           {title && (
             <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-8 font-heading text-lime-700 text-shadow-inner"
               set:html={title}
             />
           )}
           <div class="max-w-3xl mx-auto color">
-            {subtitle && <p class="text-xl text-muted mb-6 text-green-300" set:html={subtitle} />}
+            {subtitle && <p class="text-xl text-muted mb-8 text-zinc-100" set:html={subtitle} />}
           </div>
           {content && <Fragment set:html={content} />}
         </div>

@@ -23,7 +23,7 @@ export const en = {
   },
   index: {
     metadata: {
-      title: 'Namur — Agricultural Solutions',
+      title: 'Agricultural Solutions',
     },
     hero: {
       imageAlt: 'NamurHero image',
@@ -43,18 +43,22 @@ export const en = {
       gap: 'GlobalGAP Certification',
       gapdescription: 'GlobalGAP is an international standard that ensures that agricultural products are produced safely and responsibly, meeting environmental and social requirements.',
       advantages: {
-        a:'',
-        b:'',
-        c:'',
-        d:'',
+        first:'Premium Quality Guaranteed',
+        descriptionFirst:'We select and process each product with the utmost care to offer freshness, flavor and purity, complying with the highest quality standards.',
+        second:'Fast and Reliable Delivery',
+        descriptionSecond:'We have an efficient logistics system that ensures timely deliveries, maintaining the constant flow of your operations without interruptions.',
+        third:'Commitment to your Satisfaction',
+        descriptionThird:'We back up our products with a solid guarantee, ensuring quality and compliance in each purchase to give you peace of mind and confidence.',
+        fourth:'Adaptability to your Needs',
+        descriptionFourth:'We adapt to the demands of your business, offering customized formats and expanding our catalog to accompany your growth.',
       }
     },
     questions: {
       title: 'Frequently Asked Questions',
       subtitle: 'Explore the following questions to learn more about our products, processes and shipping policies. At Namur, we want to provide you with all the information you need to do business with confidence and guarantee a hassle-free experience.',
       ask: {
-        first: 'bcoabcoa',
-        answerFirst: 'bcoabcoa',
+        first: 'Does Namur ship internationally?',
+        answerFirst: 'Yes, at Namur we export to several countries in South America, North America and Europe. For more information on specific destinations and shipping options, please feel free to contact us.',
         second: 'Can I request a specific container?',
         answerSecond: 'Yes, when placing the order, you can check the formats available for each product. In addition, you have the option to propose the format you need, and if it is viable, we will establish a personalized price.',
         third: 'What is the minimum order?',
@@ -101,13 +105,13 @@ export const en = {
     },
     achievements: {
       title: 'Achievements',
-      subtitle: '',
-      item1 : '',
-      subtitleI1: '',
-      item2: '',
-      subtitleI2: '',
-      item3: '',
-      subtitleI3: '',
+      subtitle: 'At Namur, we continue to grow and improve to always offer the best. We optimize our storage capacity, reduce delivery times and guarantee a constant stock. We expanded our network of suppliers and products, projecting to double them by the end of 2025. In addition, we landed on the web to be at the technological forefront and closer to our customers.',
+      item1 : 'Logistics Optimization and Reliable Supply',
+      subtitleI1: 'We have expanded our storage capacity, which allows us to significantly reduce waiting times for product delivery. This guarantees a more stable and constant stock to meet the needs of our customers efficiently.',
+      item2: 'Operational Efficiency and Best Practices',
+      subtitleI2: 'We have optimized our daily operations by implementing good warehousing practices, allowing us to work more efficiently and maintain the quality of our products at every stage of the process.',
+      item3: 'Expansion and Sustained Growth',
+      subtitleI3: 'We have expanded our supplier network and diversified our product offering, thereby strengthening our ability to meet market demand. In addition, we plan to double both the number of products and suppliers by the end of 2025, consolidating our growth and reach.',
     }
   },
   products: {
@@ -122,35 +126,35 @@ export const en = {
 
       oregano: {
         title: 'Oregano',
-        description: 'Data to load',
+        description: 'Oreganum Vulgare\nOrigin: Argentina\n Packaging: 15Kg',
       },
       lino: {
         title: 'Lino',
-        description: 'Data to load',
+        description: 'Linum Usitatissimum \n Origin: Argentina \n Packaging: 25Kg',
       },
       pasaDeUva: {
         title: 'Pasa de uva',
-        description: 'Data to load',
+        description: 'Sultanina\nOrigin: Argentina\nPackaging: 10 or 13Kg',
       },
       coriandro: {
         title: 'Coriandro',
-        description: 'Data to load',
+        description: 'Coriandrum Sativium\nOrigin: Argentina\nPackaging: 25Kg',
       },
       romero: {
         title: 'Romero',
-        description: 'Data to load',
+        description: 'Rosmarinus official L \n Origin: Argentina \n Packaging: 15Kg',
       },
       ajoEnPolvo: {
         title: 'Ajo en Polvo',
-        description: 'Data to load',
+        description: 'Allium sativum L\nOrigin: Argentina\nPackaging: 5Kg',
       },
       sesamo: {
         title: 'Sesamo',
-        description: 'Data to load',
+        description: 'Sesamum indicum \nComing soon',
       },
       albahaca: {
         title: 'Albahaca',
-        description: 'Data to load',
+        description: 'Ocymiun basilicum L \n Ocymiun minimum L\nComing soon',
       },
       proximamente: {
         title: 'Coming soon',
