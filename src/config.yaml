@@ -1,6 +1,6 @@
 site:
   name: Namur
-  site: 'https://namur-i18n.vercel.app'
+  site: 'https://namur.vercel.app'
   base: '/'
   trailingSlash: true
 
