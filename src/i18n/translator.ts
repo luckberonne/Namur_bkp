@@ -1,5 +1,4 @@
 import { I18N } from '~/utils/config';
-import { getLocale } from 'astro-i18n-aut';
 
 import { en } from './en';
 import { es } from './es';
@@ -40,6 +39,14 @@ function getNestedObjectFromPath(obj: NestedObject, path: string): NestedObject 
 function getListFromPath(obj: NestedObject, path: string): NestedObject[] | undefined {
   const value = getValueFromPath(obj, path);
   return Array.isArray(value) ? value : undefined;
+}
+
+// The default locale is served unprefixed (e.g. `/about`); other locales are
+// prefixed with their code (e.g. `/es/about`), matching astro.config.mjs's
+// `routing: { prefixDefaultLocale: false }`.
+function getLocale(url: URL): string | undefined {
+  const [, maybeLocale] = url.pathname.split('/');
+  return maybeLocale in locales ? maybeLocale : undefined;
 }
 
 export function getLocaleFromUrl(url: URL) {

@@ -1,10 +1,25 @@
 ---
-import { GoogleAnalytics } from '@astrolib/analytics';
+// Vendored from @astrolib/analytics (MIT): its peerDependency caps at astro ^5,
+// but the component itself is just two <script> tags.
 import { ANALYTICS } from '~/utils/config';
+
+const id = ANALYTICS?.vendors?.googleAnalytics?.id ? String(ANALYTICS.vendors.googleAnalytics.id) : undefined;
+const partytown = ANALYTICS?.vendors?.googleAnalytics?.partytown;
+const attrs = partytown ? { type: 'text/partytown' } : {};
 ---
 
 {
-  ANALYTICS?.vendors?.googleAnalytics?.id ? (
-    <GoogleAnalytics id={String(ANALYTICS.vendors.googleAnalytics.id)} partytown={ANALYTICS?.vendors?.googleAnalytics?.partytown} />
-  ) : null
+  id && (
+    <Fragment>
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} {...attrs}></script>
+      <script is:inline define:vars={{ id }} {...attrs}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          window.dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', id);
+      </script>
+    </Fragment>
+  )
 }

@@ -4,7 +4,7 @@ import { SITE, METADATA, APP_BLOG, I18N } from '~/utils/config';
 import { fetchPosts } from '~/utils/blog';
 import { getPermalink } from '~/utils/permalinks';
 
-export const get = async () => {
+export const GET = async () => {
   if (!APP_BLOG.isEnabled) {
     return new Response(null, {
       status: 404,

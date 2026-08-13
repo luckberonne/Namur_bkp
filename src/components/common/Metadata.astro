@@ -1,8 +1,8 @@
 ---
 import merge from 'lodash.merge';
-import { AstroSeo } from '@astrolib/seo';
+import { buildTags } from '~/utils/seo-tags';
 
-import type { AstroSeoProps } from '@astrolib/seo/src/types';
+import type { AstroSeoProps } from '~/utils/seo-types';
 
 import { SITE, METADATA, I18N } from '~/utils/config';
 import { MetaData } from '~/types';
@@ -63,6 +63,7 @@ const seoProps: AstroSeoProps = merge(
     twitter: twitter,
   }
 );
+const tags = buildTags({ ...seoProps, openGraph: await adaptOpenGraphImages(seoProps?.openGraph, Astro.site) });
 ---
 
-<AstroSeo {...{ ...seoProps, openGraph: await adaptOpenGraphImages(seoProps?.openGraph, Astro.site) }} />
+<Fragment set:html={tags} />
