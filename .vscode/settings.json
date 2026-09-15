@@ -16,5 +16,8 @@
   },
   "yaml.schemas": {
     "./.vscode/namur/config-schema.json": "/src/config.yaml"
+  },
+  "chat.tools.terminal.autoApprove": {
+    "npm audit": true
   }
 }
